@@ -1,5 +1,27 @@
-# Exercice 2a.1 : Tri de nombres
-Lire 2 nombres entier A et B puis les afficher dans l’ordre croissant.
+# Créer mon 1er projet .NET Console
+A la racine du dépôt :
+
+Créer un répertoire “01 - Algorithmes”
+
+Dans ce répertoire, créer un sous-dossier “TriDeNombre”
+
+Ouvrir le terminal dans ce dossier
+
+Créer un projet console en tapant la commande :
+
+dotnet new console
+
+Effectuer un COMMIT avec le message “creation projet TriDeNombe”
+
+Implémenter le code correspondant à la demande suivante :
+
+Lire 3 nombres entier A, B et C (fournis par l'utilisateur) puis les afficher dans l’ordre croissant.
+
+Pour tester votre programme, tapez la commande dotnet run dans votre terminal.
+
+Lorsque vous avez terminé, effectuer un COMMIT vec le message “Fin TriDeNombre” puis pousser votre travail sur GitHub.
+
+Rendez-vous ensuite sur GitHub puis créer un nouveau PULL REQUEST et fusionnez votre travail effectué sur la branche develop vers la branche main. (Ne supprimez pas la branche develop).
 
 VARIABLES
 
