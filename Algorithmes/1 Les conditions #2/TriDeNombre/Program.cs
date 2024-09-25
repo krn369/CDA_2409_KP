@@ -2,7 +2,7 @@
 
 using System;
 
-namespace _01_TriDeNombre
+namespace TriDeNombre
 {
     class Program
     {
