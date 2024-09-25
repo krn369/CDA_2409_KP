@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlerLaSaisie", "2 Les 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerLaSaisieAvecLimite", "2 Les Boucles #2\ControllerLaSaisieAvecLimite\ControllerLaSaisieAvecLimite.csproj", "{2B58D125-A34E-4DDF-967A-5A7FA8E5806F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntervalleEntre2Nombres", "2 Les Boucles #2\IntervalleEntre2Nombres\IntervalleEntre2Nombres.csproj", "{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{2B58D125-A34E-4DDF-967A-5A7FA8E5806F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B58D125-A34E-4DDF-967A-5A7FA8E5806F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B58D125-A34E-4DDF-967A-5A7FA8E5806F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
