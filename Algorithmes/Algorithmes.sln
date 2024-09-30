@@ -13,11 +13,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDeNombre", "1 Les condit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDeNombrePlus", "1 Les conditions #2\TriDeNombresPlus\TriDeNombrePlus.csproj", "{9FCA06BD-2479-438F-889A-03AB1989A602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlerLaSaisie", "2 Les Boucles #2\ControlerLaSaisie\ControlerLaSaisie.csproj", "{8CA4035F-3285-446E-B69F-DD516AC0B15C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlerLaSaisie", "2 Les Boucles #2\ControlerLaSaisie\ControlerLaSaisie.csproj", "{8CA4035F-3285-446E-B69F-DD516AC0B15C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerLaSaisieAvecLimite", "2 Les Boucles #2\ControllerLaSaisieAvecLimite\ControllerLaSaisieAvecLimite.csproj", "{2B58D125-A34E-4DDF-967A-5A7FA8E5806F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllerLaSaisieAvecLimite", "2 Les Boucles #2\ControllerLaSaisieAvecLimite\ControllerLaSaisieAvecLimite.csproj", "{2B58D125-A34E-4DDF-967A-5A7FA8E5806F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntervalleEntre2Nombres", "2 Les Boucles #2\IntervalleEntre2Nombres\IntervalleEntre2Nombres.csproj", "{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntervalleEntre2Nombres", "2 Les Boucles #2\IntervalleEntre2Nombres\IntervalleEntre2Nombres.csproj", "{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practicePerso", "0 practicePerso\practicePerso\practicePerso.csproj", "{AF6B3277-4C0D-4719-8320-142E2E4D4839}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NombrePremier", "2 Les Boucles #2\NombrePremier\NombrePremier.csproj", "{185C1047-382E-4BA0-BE3A-3467A890C094}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RechercheDesDiviseurs", "2 Les Boucles #2\RechercheDesDiviseurs\RechercheDesDiviseurs.csproj", "{27CCE744-0F07-4073-8EAD-B06851345259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDeLaFourchette", "2 Les Boucles #2\JeuDeLaFourchette\JeuDeLaFourchette.csproj", "{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarnabeFaitSesCourses", "2 Les Boucles #2\barnabeFaitSesCourses\BarnabeFaitSesCourses.csproj", "{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +67,26 @@ Global
 		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
