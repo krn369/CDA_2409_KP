@@ -1,11 +1,13 @@
 ﻿using System;
 
+
 class NombrePremier
 {
     static void Main(string[] args)
     {
         Console.Write("Saisissez un nombre positif supérieur à 1: ");
         int N = int.Parse(Console.ReadLine());
+        Console.WriteLine();
 
         Console.WriteLine($"Les nombres premiers compris entre 1 et {N} sont:");
         for (int i = 2; i <= N; i++)
@@ -15,6 +17,7 @@ class NombrePremier
                 Console.Write(i + " ");
             }
         }
+        Console.WriteLine();
 
         // Check if the entered number itself is prime
         if (estPremier(N))
