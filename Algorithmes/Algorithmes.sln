@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllerLaSaisieAvecLimit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntervalleEntre2Nombres", "2 Les Boucles #2\IntervalleEntre2Nombres\IntervalleEntre2Nombres.csproj", "{6F548817-F8E0-47E1-8B4F-91C2CF8DEE54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practicePerso", "0 practicePerso\practicePerso\practicePerso.csproj", "{AF6B3277-4C0D-4719-8320-142E2E4D4839}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practicePerso", "0 practicePerso\practicePerso\practicePerso.csproj", "{AF6B3277-4C0D-4719-8320-142E2E4D4839}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RechercheDesDiviseurs", "RechercheDesDiviseurs\RechercheDesDiviseurs.csproj", "{7D4F7178-728E-45C7-BE77-41CBD73EC84F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NombrePremier", "2 Les Boucles #2\NombrePremier\NombrePremier.csproj", "{185C1047-382E-4BA0-BE3A-3467A890C094}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RechercheDesDiviseurs", "2 Les Boucles #2\RechercheDesDiviseurs\RechercheDesDiviseurs.csproj", "{27CCE744-0F07-4073-8EAD-B06851345259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +67,14 @@ Global
 		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF6B3277-4C0D-4719-8320-142E2E4D4839}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D4F7178-728E-45C7-BE77-41CBD73EC84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D4F7178-728E-45C7-BE77-41CBD73EC84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D4F7178-728E-45C7-BE77-41CBD73EC84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D4F7178-728E-45C7-BE77-41CBD73EC84F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185C1047-382E-4BA0-BE3A-3467A890C094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CCE744-0F07-4073-8EAD-B06851345259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
