@@ -25,9 +25,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NombrePremier", "2 Les Bouc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RechercheDesDiviseurs", "2 Les Boucles #2\RechercheDesDiviseurs\RechercheDesDiviseurs.csproj", "{27CCE744-0F07-4073-8EAD-B06851345259}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDeLaFourchette", "2 Les Boucles #2\JeuDeLaFourchette\JeuDeLaFourchette.csproj", "{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeuDeLaFourchette", "2 Les Boucles #2\JeuDeLaFourchette\JeuDeLaFourchette.csproj", "{F61F204B-DEED-4DA6-9F6E-F09C27ACEEA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarnabeFaitSesCourses", "2 Les Boucles #2\barnabeFaitSesCourses\BarnabeFaitSesCourses.csproj", "{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarnabeFaitSesCourses", "2 Les Boucles #2\barnabeFaitSesCourses\BarnabeFaitSesCourses.csproj", "{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RechercherUnNombre", "3 Tableaux #2\RechercherUnNombreDansUnTableau\RechercherUnNombre.csproj", "{117D9250-8917-4502-A1D2-04BE02DF4F44}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RechercherLeNombreD", "3 Tableaux #2\RechercherLeNombreD'occurences\RechercherLeNombreD.csproj", "{9B31C981-F511-4638-8711-3CE33B45A80D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DenombrerLesLettres", "3 Tableaux #2\DenombrerLesLettres\DenombrerLesLettres.csproj", "{6C187F86-5EE3-4082-A3B9-321CB84ABC7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriDunTableau", "3 Tableaux #2\TriDunTableau\TriDunTableau.csproj", "{D130F99F-190D-44E3-B8B2-51FF762330CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome", "3 Tableaux #2\Palindrome\Palindrome.csproj", "{414604CB-4CFA-4ACC-8BE6-F37166743E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +97,26 @@ Global
 		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E035CA52-BFA7-4EBF-BA9A-3E9419CA4D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117D9250-8917-4502-A1D2-04BE02DF4F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117D9250-8917-4502-A1D2-04BE02DF4F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117D9250-8917-4502-A1D2-04BE02DF4F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117D9250-8917-4502-A1D2-04BE02DF4F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B31C981-F511-4638-8711-3CE33B45A80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B31C981-F511-4638-8711-3CE33B45A80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B31C981-F511-4638-8711-3CE33B45A80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B31C981-F511-4638-8711-3CE33B45A80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C187F86-5EE3-4082-A3B9-321CB84ABC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C187F86-5EE3-4082-A3B9-321CB84ABC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C187F86-5EE3-4082-A3B9-321CB84ABC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C187F86-5EE3-4082-A3B9-321CB84ABC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D130F99F-190D-44E3-B8B2-51FF762330CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D130F99F-190D-44E3-B8B2-51FF762330CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D130F99F-190D-44E3-B8B2-51FF762330CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D130F99F-190D-44E3-B8B2-51FF762330CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
