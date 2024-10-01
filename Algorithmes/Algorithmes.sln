@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RechercherLeNombreD", "3 Ta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DenombrerLesLettres", "3 Tableaux #2\DenombrerLesLettres\DenombrerLesLettres.csproj", "{6C187F86-5EE3-4082-A3B9-321CB84ABC7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriDunTableau", "3 Tableaux #2\TriDunTableau\TriDunTableau.csproj", "{D130F99F-190D-44E3-B8B2-51FF762330CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDunTableau", "3 Tableaux #2\TriDunTableau\TriDunTableau.csproj", "{D130F99F-190D-44E3-B8B2-51FF762330CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome", "3 Tableaux #2\Palindrome\Palindrome.csproj", "{414604CB-4CFA-4ACC-8BE6-F37166743E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Palindrome", "3 Tableaux #2\Palindrome\Palindrome.csproj", "{414604CB-4CFA-4ACC-8BE6-F37166743E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesFruitsEtLegeumes", "4 Révisions #2\LesFruitsEtLegeumes\LesFruitsEtLegeumes.csproj", "{E584EE0F-1239-4684-B997-244EF0FE64E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{414604CB-4CFA-4ACC-8BE6-F37166743E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E584EE0F-1239-4684-B997-244EF0FE64E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E584EE0F-1239-4684-B997-244EF0FE64E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E584EE0F-1239-4684-B997-244EF0FE64E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E584EE0F-1239-4684-B997-244EF0FE64E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
