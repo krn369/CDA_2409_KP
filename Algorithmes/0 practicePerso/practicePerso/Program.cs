@@ -4,28 +4,45 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Enter a string ending with '.':");
-        string input = Console.ReadLine();
+        int countYoung = 0;
+        int countEqual20 = 0;
+        int countOlder = 0;
+        int[] ages = new int[20];
 
-        if (string.IsNullOrEmpty(input) || input == ".")
+        Console.WriteLine("Veuillez saisir les âges de 20 personnes \n:");
+
+        for (int i = 0; i < 20; i++)
         {
-            Console.WriteLine("LA CHAINE EST VIDE");
-            return;
-        }
+            Console.Write($"Âge de la personne {i + 1}: ");
+            ages[i] = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter the letter to count:");
-        char letter = Console.ReadKey().KeyChar;
-        Console.WriteLine();
-
-        int count = 0;
-        foreach (char c in input)
-        {
-            if (c == letter)
+            if (ages[i] < 20)
             {
-                count++;
+                countYoung++;
+            }
+            else if (ages[i] == 20)
+            {
+                countEqual20++;
+            }
+            else
+            {
+                countOlder++;
             }
         }
 
-        Console.WriteLine($"The letter '{letter}' appears {count} times in the string.");
+        if (countYoung == 20)
+        {
+            Console.WriteLine("\nTOUTES LES PERSONNES ONT MOINS DE 20 ANS");
+        }
+        else if (countYoung == 0)
+        {
+            Console.WriteLine("\nTOUTES LES PERSONNES ONT PLUS DE 20 ANS");
+        }
+        else
+        {
+            Console.WriteLine($"\nNombre de personnes moins de 20 ans : {countYoung}");
+            Console.WriteLine($"Nombre de personnes égales à 20 ans : {countEqual20}");
+            Console.WriteLine($"Nombre de personnes plus de 20 ans : {countOlder}");
+        }
     }
 }
