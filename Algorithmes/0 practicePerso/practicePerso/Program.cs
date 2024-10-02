@@ -1,48 +1,51 @@
-﻿using System;
+﻿/*
+L'utilisateur entre un mot de passe
+Le programme contrôle si le mot de passe respecte les règles en vigueur
+- 12 caractères minimum
+    ET Au moins 1 minuscule
+    ET Au moins 1 majuscule
+    ET Au moins 1 chiffre
+    ET Au moins 1 caractère spécial
+OU
+- 20 caractères minimum
+    ET Au moins 1 minuscule
+    ET Au moins 1 majuscule
+    ET Au moins 1 chiffre
+*/
 
-class Program
+using System.Text.RegularExpressions;
+
+string motDePasse;
+string regexMinuscules;
+string regexMajuscules;
+string regexChiffres;
+string regexCaracteresSpeciaux;
+
+Console.WriteLine("Saisissez un mot de passe : ");
+
+motDePasse = Console.ReadLine() ?? "";
+
+
+regexMinuscules = "[a-z]{1,}"; // {1,} = 1 ou plusieurs
+
+regexMajuscules = "[A-Z]+"; // + = 1 ou plusieurs
+
+regexChiffres = "[0-9]+";
+
+regexCaracteresSpeciaux = "[^a-zA-Z0-9]+";
+
+
+if (
+    Regex.IsMatch(motDePasse, regexMinuscules) &&
+    Regex.IsMatch(motDePasse, regexMajuscules) &&
+    Regex.IsMatch(motDePasse, regexChiffres) &&
+    Regex.IsMatch(motDePasse, regexCaracteresSpeciaux) &&
+    motDePasse.Length >= 12
+)
 {
-    static void Main()
-    {
-        int countYoung = 0;
-        int countEqual20 = 0;
-        int countOlder = 0;
-        int[] ages = new int[20];
-
-        Console.WriteLine("Veuillez saisir les âges de 20 personnes \n:");
-
-        for (int i = 0; i < 20; i++)
-        {
-            Console.Write($"Âge de la personne {i + 1}: ");
-            ages[i] = int.Parse(Console.ReadLine());
-
-            if (ages[i] < 20)
-            {
-                countYoung++;
-            }
-            else if (ages[i] == 20)
-            {
-                countEqual20++;
-            }
-            else
-            {
-                countOlder++;
-            }
-        }
-
-        if (countYoung == 20)
-        {
-            Console.WriteLine("\nTOUTES LES PERSONNES ONT MOINS DE 20 ANS");
-        }
-        else if (countYoung == 0)
-        {
-            Console.WriteLine("\nTOUTES LES PERSONNES ONT PLUS DE 20 ANS");
-        }
-        else
-        {
-            Console.WriteLine($"\nNombre de personnes moins de 20 ans : {countYoung}");
-            Console.WriteLine($"Nombre de personnes égales à 20 ans : {countEqual20}");
-            Console.WriteLine($"Nombre de personnes plus de 20 ans : {countOlder}");
-        }
-    }
+    Console.WriteLine("Mot de passe OK");
+}
+else
+{
+    Console.WriteLine("Mot de passe trop faible !");
 }

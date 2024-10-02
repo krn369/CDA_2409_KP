@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesCapitales", "1 Les condi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenombrerLesLDAlphabet", "4 Révisions #2\DenombrerLesLDAlphabet\DenombrerLesLDAlphabet.csproj", "{210240D8-2995-4ECC-AB4E-331BBE842C5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotDePasseSecure", "MotDePasseSecure\MotDePasseSecure.csproj", "{78358826-10E0-4817-8666-5E5950F02D1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
