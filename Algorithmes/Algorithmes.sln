@@ -39,13 +39,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDunTableau", "3 Tableaux
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Palindrome", "3 Tableaux #2\Palindrome\Palindrome.csproj", "{414604CB-4CFA-4ACC-8BE6-F37166743E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesFruitsEtLegeumes", "4 Révisions #2\LesFruitsEtLegeumes\LesFruitsEtLegeumes.csproj", "{E584EE0F-1239-4684-B997-244EF0FE64E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesFruitsEtLegeumes", "4 Révisions #2\LesFruitsEtLegeumes\LesFruitsEtLegeumes.csproj", "{E584EE0F-1239-4684-B997-244EF0FE64E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDu02", "4 Révisions #2\JeuDu0-2\JeuDu02.csproj", "{85967E50-FC91-4150-8581-EF5EA65CBD81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeuDu02", "4 Révisions #2\JeuDu0-2\JeuDu02.csproj", "{85967E50-FC91-4150-8581-EF5EA65CBD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculDuNombreDJ", "4 Révisions #2\CalculDuNombreDP\CalculDuNombreDJ.csproj", "{AB03B9FE-050A-4714-B344-E1830E39B6AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculDuNombreDJ", "4 Révisions #2\CalculDuNombreDP\CalculDuNombreDJ.csproj", "{AB03B9FE-050A-4714-B344-E1830E39B6AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfficherParChaqueCategorie", "4 Révisions #2\AfficherParChaqueCategorie\AfficherParChaqueCategorie.csproj", "{E849C848-17EC-43FB-A974-FE3573852884}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AfficherParChaqueCategorie", "4 Révisions #2\AfficherParChaqueCategorie\AfficherParChaqueCategorie.csproj", "{E849C848-17EC-43FB-A974-FE3573852884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesCapitales", "1 Les conditions #2\LesCapitales\LesCapitales.csproj", "{9E933E54-0D85-40FD-961F-A5FC5B16EE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenombrerLesLDAlphabet", "4 Révisions #2\DenombrerLesLDAlphabet\DenombrerLesLDAlphabet.csproj", "{210240D8-2995-4ECC-AB4E-331BBE842C5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotDePasseSecure", "MotDePasseSecure\MotDePasseSecure.csproj", "{78358826-10E0-4817-8666-5E5950F02D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +147,18 @@ Global
 		{E849C848-17EC-43FB-A974-FE3573852884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E849C848-17EC-43FB-A974-FE3573852884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E849C848-17EC-43FB-A974-FE3573852884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78358826-10E0-4817-8666-5E5950F02D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
