@@ -47,11 +47,11 @@ regexCaracteresSpeciaux = "[^a-zA-Z0-9]+";
 /*
  Checking Password Validity
 This "if" statement checks if the password meets the following criteria:
-- Contains at least one lowercase letter
-- Contains at least one uppercase letter
-- Contains at least one digit
-- Contains at least one special character AND Is at least 20 characters long
-- OR at least 12 characters long
+- Contains at least one lowercase letter AND
+- Contains at least one uppercase letter AND
+- Contains at least one digit AND
+- [Contains at least one special character OR Is at least 20 characters long] AND
+- Contains at least 12 characters long
 
 If all these conditions are met, it prints "Password OK" otherwise it prints "Password too weak!"
  */
