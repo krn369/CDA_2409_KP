@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
@@ -49,13 +49,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AfficherParChaqueCategorie"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesCapitales", "1 Les conditions #2\LesCapitales\LesCapitales.csproj", "{9E933E54-0D85-40FD-961F-A5FC5B16EE46}"
 EndProject
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DenombrerLesLettresDAL", "4 Révisions #2\DenombrerLesLettresDAL\DenombrerLesLettresDAL.csproj", "{75868BF0-C7A4-4BB2-9A42-2A60B967F6F2}"
+
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotDePasseSecure", "5 Extra\MotDePasseSecure\MotDePasseSecure.csproj", "{DFC2D2C5-D94B-470C-BA27-FB0FF335C493}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KpariyarTools", "05 Extra\Pkaran.tools\KpariyarTools.csproj", "{82B227C1-3A7F-469E-8090-7F2D9E026ABD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoReferenceObjet", "5 Extra\DemoReferenceObjet\DemoReferenceObjet.csproj", "{2D5F6776-3A56-4064-B446-C901020E015A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KpariyarTools", "5 Extra\Pkaran.tools\KpariyarTools.csproj", "{F61DB05F-70DD-4785-811C-0C122951B37D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenombrerLesLettresDAL", "4 Révisions #2\DenombrerLesLettresDAL\DenombrerLesLettresDAL.csproj", "{75868BF0-C7A4-4BB2-9A42-2A60B967F6F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartePrepayee", "5 Extra\CartePrepayee\CartePrepayee.csproj", "{E6FCD42C-9EFB-493C-A9A0-B661F8E3380A}"
 EndProject
@@ -157,10 +157,25 @@ Global
 		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E933E54-0D85-40FD-961F-A5FC5B16EE46}.Release|Any CPU.Build.0 = Release|Any CPU
+
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210240D8-2995-4ECC-AB4E-331BBE842C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6936A73B-152B-4BCD-A447-C136ACF5D0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6936A73B-152B-4BCD-A447-C136ACF5D0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6936A73B-152B-4BCD-A447-C136ACF5D0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6936A73B-152B-4BCD-A447-C136ACF5D0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B227C1-3A7F-469E-8090-7F2D9E026ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B227C1-3A7F-469E-8090-7F2D9E026ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B227C1-3A7F-469E-8090-7F2D9E026ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B227C1-3A7F-469E-8090-7F2D9E026ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+
 		{75868BF0-C7A4-4BB2-9A42-2A60B967F6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75868BF0-C7A4-4BB2-9A42-2A60B967F6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75868BF0-C7A4-4BB2-9A42-2A60B967F6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75868BF0-C7A4-4BB2-9A42-2A60B967F6F2}.Release|Any CPU.Build.0 = Release|Any CPU
+
 		{DFC2D2C5-D94B-470C-BA27-FB0FF335C493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFC2D2C5-D94B-470C-BA27-FB0FF335C493}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFC2D2C5-D94B-470C-BA27-FB0FF335C493}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -177,6 +192,7 @@ Global
 		{E6FCD42C-9EFB-493C-A9A0-B661F8E3380A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6FCD42C-9EFB-493C-A9A0-B661F8E3380A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6FCD42C-9EFB-493C-A9A0-B661F8E3380A}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
