@@ -25,7 +25,7 @@ class RechercherLeNombreD
 
         Console.WriteLine("\nSaisissez la lettre à compter.  ");
         char lettre = Console.ReadKey().KeyChar;
-        
+        Console.WriteLine();
 
         char[] charTableau = phrase.ToCharArray();
 
@@ -42,7 +42,7 @@ class RechercherLeNombreD
 
         if (count > 0)
         {
-            Console.WriteLine($"\nLa lettre '{lettre}' appraît {count} fois dans la chaîne.");
+            Console.WriteLine($"$ {lettre}' appraît {count} fois dans la chaîne.");
             Console.WriteLine();
         }
 
