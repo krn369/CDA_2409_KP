@@ -1,51 +1,66 @@
-﻿/*
-L'utilisateur entre un mot de passe
-Le programme contrôle si le mot de passe respecte les règles en vigueur
-- 12 caractères minimum
-    ET Au moins 1 minuscule
-    ET Au moins 1 majuscule
-    ET Au moins 1 chiffre
-    ET Au moins 1 caractère spécial
-OU
-- 20 caractères minimum
-    ET Au moins 1 minuscule
-    ET Au moins 1 majuscule
-    ET Au moins 1 chiffre
-*/
+﻿using System;
 
-using System.Text.RegularExpressions;
-
-string motDePasse;
-string regexMinuscules;
-string regexMajuscules;
-string regexChiffres;
-string regexCaracteresSpeciaux;
-
-Console.WriteLine("Saisissez un mot de passe : ");
-
-motDePasse = Console.ReadLine() ?? "";
-
-
-regexMinuscules = "[a-z]{1,}"; // {1,} = 1 ou plusieurs
-
-regexMajuscules = "[A-Z]+"; // + = 1 ou plusieurs
-
-regexChiffres = "[0-9]+";
-
-regexCaracteresSpeciaux = "[^a-zA-Z0-9]+";
-
-
-if (
-    Regex.IsMatch(motDePasse, regexMinuscules) &&
-    Regex.IsMatch(motDePasse, regexMajuscules) &&
-    Regex.IsMatch(motDePasse, regexChiffres) &&
-    Regex.IsMatch(motDePasse, regexCaracteresSpeciaux) &&
-    motDePasse.Length >= 12
-)
+class PrepaidCard
 {
-    Console.WriteLine("Mot de passe OK");
-}
-else
-{
-    Console.WriteLine("Mot de passe trop faible !");
+    // Class to represent a user
+    class User
+    {
+        public string Name;
+        public double Balance;
+
+        public User(string name, double balance)
+        {
+            Name = name;
+            Balance = balance;
+        }
+    }
+
+    static void Main()
+    {
+        // Initialize users
+        User[] users = new User[5];
+        users[0] = new User("Alice", 10.0);
+        users[1] = new User("Bob", 5.0);
+        users[2] = new User("Charlie", 3.0);
+        users[3] = new User("David", 8.0);
+        users[4] = new User("Eve", 6.0);
+
+        // Meal price
+        double mealPrice = 4.0;
+
+        // Ask for user name
+        Console.WriteLine("Enter the user's name:");
+        string userName = Console.ReadLine();
+
+        // Find the user
+        User foundUser = null;
+        foreach (var user in users)
+        {
+            if (user.Name.Equals(userName, StringComparison.OrdinalIgnoreCase))
+            {
+                foundUser = user;
+                break;
+            }
+        }
+
+        // Check if user is found and has enough balance
+        if (foundUser != null)
+        {
+            Console.WriteLine($"User found: {foundUser.Name}, Balance: {foundUser.Balance}€");
+
+            if (foundUser.Balance >= mealPrice)
+            {
+                foundUser.Balance -= mealPrice;
+                Console.WriteLine($"Meal paid. New balance: {foundUser.Balance}€");
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds to pay for the meal.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("User not found.");
+        }
+    }
 }
