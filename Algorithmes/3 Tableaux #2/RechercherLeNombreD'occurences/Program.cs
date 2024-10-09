@@ -1,24 +1,30 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 class RechercherLeNombreD
 {
     static void Main(string[] args)
     {
-
+        string regexPoint = @"\.$";
 
         Console.WriteLine("Saisissez une phrase en terminé par '.': ");
         string phrase = Console.ReadLine();
-        Console.WriteLine();
+
 
         if (string.IsNullOrEmpty(phrase) || phrase == ".")
         {
-            Console.WriteLine("LA CHAINE EST VIDE.");
+            Console.WriteLine("\nLA CHAINE EST VIDE.");
             return;
         }
 
-        Console.WriteLine("Saisissez la lettre à compter.  ");
+        else if (!Regex.IsMatch(phrase, regexPoint))
+        {
+            Console.WriteLine("\nLa phrase doit se terminer par un point.");
+            return;
+        }
+
+        Console.WriteLine("\nSaisissez la lettre à compter.  ");
         char lettre = Console.ReadKey().KeyChar;
-        Console.WriteLine();
         Console.WriteLine();
 
         char[] charTableau = phrase.ToCharArray();
@@ -36,13 +42,13 @@ class RechercherLeNombreD
 
         if (count > 0)
         {
-            Console.WriteLine($"La lettre '{lettre}' appraît {count} fois dans la chaîne.");
+            Console.WriteLine($"$ {lettre}' appraît {count} fois dans la chaîne.");
             Console.WriteLine();
         }
 
         else
         {
-            Console.WriteLine("La lettre n'est pas présente.");
+            Console.WriteLine("\nLa lettre n'est pas présente.");
             Console.WriteLine();
         }
 
