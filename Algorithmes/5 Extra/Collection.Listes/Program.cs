@@ -1,4 +1,25 @@
-﻿internal class Program
+﻿
+/*
+ 
+Au démarrage, il n'y a aucun utilisateur enregistré.
+ 
+1. Le programme demande à l'utilisateur de saisir un nom et un prénom.
+	- L’utilisateur saisit un nom et un prénom.
+ 
+2. Lorsque toutes les informations sont saisies
+	- Le programme enregistre l'utilisateur
+ 
+3. Le programme demande à l'utilisateur s'il souhaite ajouter une autre personne.
+	- Si oui
+		- Retour à l'étape 1 (saisir nom et prénom)
+	- Si non
+		- Afficher tous les utilisateurs enregistrés
+ 
+4. Le programme se termine
+
+*/
+
+internal class Program
 {
     private static void Main(string[] args)
     {
