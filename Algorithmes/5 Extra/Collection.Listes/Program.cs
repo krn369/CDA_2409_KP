@@ -20,7 +20,7 @@ Au démarrage, il n'y a aucun utilisateur enregistré.
 */
 
 
-/*
+
     using System.Collections;
 
 internal class Program
@@ -37,13 +37,13 @@ internal class Program
 
         do
         {
-            Console.WriteLine("Saisissez votre prénom et nom :");
+            Console.Write("Saisissez votre prénom et nom : ");
 
-            saisieNomPrenom = Console.ReadLine() ?? " ";
+            saisieNomPrenom = Console.ReadLine().ToUpper() ?? " ";
 
             utilisateurs.Add(saisieNomPrenom);
 
-            Console.WriteLine("Souhaitez vous ajouter un autre utilisateur ? (N/O)");
+            Console.WriteLine("\nSouhaitez vous ajouter un autre utilisateur ? (N/O)");
 
             saisieOuiNon = Console.ReadKey(true).KeyChar;
 
@@ -52,7 +52,7 @@ internal class Program
 
         for (int i = 0; i < utilisateurs.Count; i++)
         {
-            Console.WriteLine(utilisateurs[i]);
+            Console.WriteLine("\n" + utilisateurs[i]);
         }
 
         /*
@@ -60,51 +60,12 @@ internal class Program
         {
             Console.WriteLine(personne);
         }
-        *
+        */
 
     }
 }
 
-*/
 
-using System;
-using System.Collections.Generic;
 
-class Program
-{
-    static void Main()
-    {
-        List<User> users = new List<User>();  // to keep track of all the users we will add.
-        bool addMoreUsers = true;
 
-        while (addMoreUsers) // It continues to run as long as addMoreUsers is true.
-        {
-            // Demander le nom et le prénom de l'utilisateur // Ask the user to enter their fname and lname.
-            Console.Write("Entrez le nom: ");
-            string lastName = Console.ReadLine().ToUpper();
-            Console.Write("Entrez le prénom: ");
-            string firstName = Console.ReadLine().ToUpper();
 
-            // Enregistrer l'utilisateur  || Create an new user object with the entered fname and lname and add it to the list.
-            users.Add(new User { FirstName = firstName, LastName = lastName });
-
-            // Demander si l'utilisateur souhaite ajouter une autre personne  || check if more users should be added, if type "oui" the loop continues, otherwise it stops
-            Console.Write("Voulez-vous ajouter une autre personne? (oui/non): ");
-            string response = Console.ReadLine().ToLower();
-            addMoreUsers = response == "oui";
-        }
-
-        // Afficher tous les utilisateurs enregistrés || Displaying all users after the loop ends
-        Console.WriteLine("\nUtilisateurs enregistrés:");
-        foreach (var user in users)
-        {
-            Console.WriteLine($"{user.FirstName} {user.LastName}");
-        }
-    }
-}
-
-class User  // user class defination; it has two properties, fname and lname to store the user's information.
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-}
