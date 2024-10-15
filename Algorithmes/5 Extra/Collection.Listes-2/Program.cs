@@ -56,6 +56,9 @@ class User
     private int Calculer_Age(DateTime dateDeNaissance)
     {
         int age = DateTime.Now.Year - dateDeNaissance.Year;
+
+ // Checks If the current day of the year is before the birthday, it means the person hasn’t had their birthday yet this year, so subtract 1 from the age.
+       
         if (DateTime.Now.DayOfYear < dateDeNaissance.DayOfYear)
             age--;
         return age;

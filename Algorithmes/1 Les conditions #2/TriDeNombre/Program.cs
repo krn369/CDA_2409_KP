@@ -1,17 +1,21 @@
 ﻿
-using KpariyarTools;
+//  Lire 3 nombres entier A, B et C (fournis par l'utilisateur) puis les afficher dans l’ordre croissant.
+
+
+using KpariyarTools;  //using personal library
 
 namespace TriDeNombre
 {
     class Program
-    {
+    {   
+
         static void Main(string[] args)                 
 
             {
 
             int A = ConsoleTools.DemanderNombreEntier("Entrez le premier nombre");
             int B = ConsoleTools.DemanderNombreEntier("\nEntrez le deuxième nombre");
-            int C = ConsoleTools.DemanderNombreEntier("\nEntrez le troisième nombre");
+            int C = ConsoleTools.DemanderNombreEntier("\nEntrez le troisième nombre");      
 
             /*
             // Lire les trois nombres entiers
