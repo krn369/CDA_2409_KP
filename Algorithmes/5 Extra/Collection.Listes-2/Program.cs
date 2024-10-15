@@ -102,16 +102,22 @@ class Program
             // Declare a variable to store additional information.
             string infoAdditional;
 
-            // If the user is an adult, ask for their profession.
-            if (user.Age >= 18)
+            // If the user's age is below 0, it is invalid.
+            if (user.Age < 0)
             {
-                Console.Write("Entrez votre métier : ");
-                infoAdditional = Console.ReadLine().ToUpper();
+                Console.Write("Saisie non valide !");
+                break;                
             }
             // Ask fo the user's favourite color if ther are a minor.
-            else
+            else if(user.Age < 18)
             {
                 Console.Write("Entrez votre couleur préférée : ");
+                infoAdditional = Console.ReadLine().ToUpper();
+            }
+            // If the user is an adult, ask for their profession.
+            else
+            {
+                Console.Write("Entrez votre métier : ");
                 infoAdditional = Console.ReadLine().ToUpper();
             }
 
