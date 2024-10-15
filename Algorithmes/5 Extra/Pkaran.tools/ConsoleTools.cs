@@ -7,7 +7,8 @@ namespace KpariyarTools
 {   // This means it can be accessed from other parts of the program.
     public class ConsoleTools
     {
-        public static int DemanderNombreEntier(string _question) // This declares a public static method DME that returns an integer. It takes a single parameter Q of typ sting
+        public static int DemanderNombreEntier(string _question) 
+            // This declares a public static method DME that returns an integer. It takes a single parameter Q of typ sting
             // This method prompts the user with a question, reads the input and keep asking until a valid int is entered. it then returns that integer
 
 
@@ -61,7 +62,7 @@ namespace KpariyarTools
 
 
 
-
+        /*
 
         public static float DemanderFloatPositif(string _question)
         {
@@ -87,5 +88,7 @@ namespace KpariyarTools
 
 
         }
+
+        */
     }
 }
