@@ -59,9 +59,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DenombrerLesLettresDAL", "4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collection.Listes", "5 Extra\Collection.Listes\Collection.Listes.csproj", "{38A3582D-9A21-4F3B-8DD6-54A17394D168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateFinalGPA", "0 practicePerso\CalculateFinalGPA\CalculateFinalGPA.csproj", "{DAFC4E9B-8928-4D1D-800F-37ACBF586D38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculateFinalGPA", "0 practicePerso\CalculateFinalGPA\CalculateFinalGPA.csproj", "{DAFC4E9B-8928-4D1D-800F-37ACBF586D38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection.Listes-2", "5 Extra\Collection.Listes-2\Collection.Listes-2.csproj", "{A4116AF2-CD04-4C0D-8A12-B2796A726922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collection.Listes-2", "5 Extra\Collection.Listes-2\Collection.Listes-2.csproj", "{A4116AF2-CD04-4C0D-8A12-B2796A726922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection.Listes.Object", "5 Extra\Collection.Listes.Object\Collection.Listes.Object.csproj", "{586E0437-3103-4C7B-8FD9-AD36B6A81AC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{A4116AF2-CD04-4C0D-8A12-B2796A726922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4116AF2-CD04-4C0D-8A12-B2796A726922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4116AF2-CD04-4C0D-8A12-B2796A726922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586E0437-3103-4C7B-8FD9-AD36B6A81AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586E0437-3103-4C7B-8FD9-AD36B6A81AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586E0437-3103-4C7B-8FD9-AD36B6A81AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586E0437-3103-4C7B-8FD9-AD36B6A81AC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
