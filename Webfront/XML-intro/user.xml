@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8?">
+<users>
+
+    <user id="1">
+        <username>krn369</username>
+        <firstname>Karan</firstname>
+        <lastname>PARIYAR</lastname>
+        <birthday format="yyyy-mm-dd">1998-09-14</birthday>
+    </user>
+
+    
+    <user id="2">
+        <username>krojirn</username>
+        <firstname>Rojita</firstname>
+        <lastname>RANJITKAR</lastname>
+        <birthday format="yyyy-mm-dd">1995-08-15</birthday>
+    </user>
+
+    <user id="3">
+        <username>khusi12</username>
+        <firstname>Khusi</firstname>
+        <lastname>Hingmang</lastname>
+        <birthday format="yyyy-mm-dd">2006-01-15</birthday>
+    </user>
+
+    <user id="4">
+        <username>toto</username>
+        <firstname>Sarashree</firstname>
+        <lastname>SUKUPAYO</lastname>
+        <birthday format="yyyy-mm-dd">2018-03-25</birthday>
+    </user>
+
+    <user id="5">
+        <username>mata</username>
+        <firstname>Sita</firstname>
+        <lastname>SUKUPAYO</lastname>
+        <birthday format="yyyy-mm-dd">1978-12-28</birthday>
+    </user>
+
+</users>
