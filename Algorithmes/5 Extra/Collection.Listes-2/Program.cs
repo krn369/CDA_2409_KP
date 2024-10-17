@@ -52,6 +52,9 @@ class User
     public string InfoAdditional { get; set; }
 
     // This property calculates the age based on the birthdate.
+    // The age property uses the method to calculate the user's age based on their birthdate.
+    // Whenever we access the age property, it will call the "calculer_age" method and return the calculated age.
+    // => This is known as the “expression-bodied member” syntax. It is similar to writing a method with a single return statement.
     public int Age => Calculer_Age(DateDeNaissance);
 
 
