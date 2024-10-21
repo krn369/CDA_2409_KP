@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <h2>Votre compte configuré en 2 minutes !</h2>
+
+    <form action="/submit-form" method="post">
+
+        <fieldset>
+            <legend>État civil</legend>
+
+            <label for="last-name">Nom:</label><br>
+            <input type="text" id="last-name" name="last-name"><br>
+
+            <label for="first-name">Prénom:</label><br>
+            <input type="text" id="first-name" name="first-name"><br>
+
+            <label for="birth-date">Date de naissance: jj/mm/aaaa</label><br>
+            <input type="text" id="birth-date" name="birth-date"><br>
+
+     </fieldset>
+
+        <fieldset>
+            <legend>Informations de contact</legend>
+
+            <label for="email-address">Adresse Email:</label><br>
+            <input type="email" id="email-address" name="email-address"><br>
+
+            <label for="telephone">Téléphone:</label><br>
+            <input type="tel" id="telephone" name="telephone"><br>
+        </fieldset>
+        
+        <fieldset>
+            <label>
+                <input type="checkbox" name="terms"> J'accepte les conditions d'utilisation
+            </label><br>
+
+            <button type="submit">S'inscrire</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
