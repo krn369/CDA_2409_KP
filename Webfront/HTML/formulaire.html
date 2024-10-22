@@ -8,35 +8,48 @@
     <h1>Formulaire d'inscription</h1>
     <h2>Votre compte configuré en 2 minutes !</h2>
 
-    <form action="/submit-form" method="post">
+   
+    <form action="/submit-form" method="get" onsubmit ="alert('Success!')">
 
         <fieldset>
             <legend>État civil</legend>
+            
+                <label for="last-name">Nom :</label>
+                <input type="text" id="last-name" name="last-name" required><br>
+            
 
-            <label for="last-name">Nom:</label><br>
-            <input type="text" id="last-name" name="last-name"><br>
+            
+                <label for="first-name">Prénom :</label>
+                <input type="text" id="first-name" name="first-name" required><br>
+            
 
-            <label for="first-name">Prénom:</label><br>
-            <input type="text" id="first-name" name="first-name"><br>
+            
+                <label for="birth-date">Date de naissance : </label>
+                <input type ="date" id = "birth-date" name = "birthdate" placeholder = "date input" required />
+           
 
-            <label for="birth-date">Date de naissance: jj/mm/aaaa</label><br>
-            <input type="text" id="birth-date" name="birth-date"><br>
 
      </fieldset>
 
         <fieldset>
             <legend>Informations de contact</legend>
 
-            <label for="email-address">Adresse Email:</label><br>
-            <input type="email" id="email-address" name="email-address"><br>
+            
+                <label for="email-address">Adresse Email :</label>
+                <input type="email" id="email-address" name="email-address" required><br>
+            
 
-            <label for="telephone">Téléphone:</label><br>
-            <input type="tel" id="telephone" name="telephone"><br>
+            
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+            
+
+
         </fieldset>
         
         <fieldset>
             <label>
-                <input type="checkbox" name="terms"> J'accepte les conditions d'utilisation
+                <input type="checkbox" required name="terms"> J'accepte les <u><a href="https://www.exprime-avocat.fr/conditions-generales-dutilisation-cgu-definition-redaction-et-pratique-juridique/#:~:text=Les%20Conditions%20G%C3%A9n%C3%A9rales%20d%E2%80%99Utilisation%20%28CGU%29%20d%C3%A9terminent%20les%20r%C3%A8gles,ses%20services%20mais%20aussi%20de%20conna%C3%AEtre%20ses%20droits.">conditions d'utilisation</a></u>
             </label><br>
 
             <button type="submit">S'inscrire</button>
