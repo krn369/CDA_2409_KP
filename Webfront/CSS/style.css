@@ -1,10 +1,12 @@
 
 h1{
-    color:#7D8CC4;
+    color:#726DA6;
+    text-align: center;
 }
 
 h2{
     color:#726DA6;
+    
 }
 
 p,
@@ -15,4 +17,22 @@ li{
 footer
 {
     color:#A0D2DB;
+    text-align: center;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+body{
+    font-family: Verdana;
+    background-color:#7D8CC4;       
+}
+
+main{
+    background-color: white;
+    width: 1000px;
+    justify-self: center;
+    padding-bottom: 10px;
+    padding : 10px 10px 10px 10px;
+    
 }
