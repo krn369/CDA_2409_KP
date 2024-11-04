@@ -1,0 +1,24 @@
+body{
+  background-color: #222222;
+  color: #FFFFFF;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  margin: 0%;
+}
+
+a {
+color: CCCCFF;
+}
+
+h1,h2{
+       color: #CCFFCC;
+     }
+
+footer {
+        text-align: center;
+       }
+
+header {
+        display: flex;
+        background-color: #224422;
+        
+}
