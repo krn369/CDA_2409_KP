@@ -13,12 +13,12 @@ body {
 .navbar {
     height: 50px;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     background-color: #f8f8f8;
     padding: 20px 0;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.2);
 }
 
@@ -30,6 +30,7 @@ img:hover{
 
 .navbar li {
     margin: 30px 30px;
+
     &:hover {
         transform: scale(1.1);
     }

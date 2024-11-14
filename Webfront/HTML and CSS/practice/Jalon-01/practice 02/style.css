@@ -63,3 +63,58 @@ header {
     }
 
 }
+
+
+#presentation {
+
+
+    .container {
+        padding: 5em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 90%;
+        margin: auto;
+
+        
+        article {
+            width: 46%;
+
+            h2 {
+                margin-bottom: 1em;
+            }
+
+            p {
+                line-height: 30px;
+            }
+
+        }
+
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+
+#services {
+    h2 {
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
+    .gallery{
+        figure {
+            img{
+                width: 100%;
+            }
+            figcaption{
+                background-color: rgb(51, 49, 49);
+                text-align: center;
+                
+            }
+        }
+    }
+}

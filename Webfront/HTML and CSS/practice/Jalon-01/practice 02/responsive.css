@@ -1,0 +1,24 @@
+@media (max-width:600px){
+#presentation {
+
+    header {
+        #burger-menu{
+            display: block;
+            align-self: center;
+        }
+    }
+
+
+
+    #presentation {
+
+        .container {
+
+            img {
+
+            }
+
+        }
+    }
+}
+}
