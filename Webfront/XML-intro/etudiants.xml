@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Formation>
+    <intitule>CDA</intitule>
+    <duree>19</duree>
+    <dateDebut format="yyyy-mm-dd">2024-09-16</dateDebut>
+    <dateFin format="yyyy-mm-dd">2026-05-22</dateFin>
+        <Etudiants>
+            <etudiant>
+                <nom>PARIYAR</nom>
+                <prenom>Karan</prenom>
+                <dateNaissance format="yyyy-mm-dd">1998-09-14</dateNaissance>
+                <mail>krn@gmail.com</mail>
+            </etudiant>
+
+            <etudiant>
+                <nom>RANJITKAR</nom>
+                <prenom>Rojita</prenom>
+                <dateNaissance format="yyyy-mm-dd">1995-08-15</dateNaissance>
+                <mail>krojirn@gmail.com</mail>
+            </etudiant>
+
+            <etudiant>
+                <nom>HINGMANG</nom>
+                <prenom>Khusi</prenom>
+                <dateNaissance format="yyyy-mm-dd">2008-01-25</dateNaissance>
+                <mail>khusi@gmail.com</mail>
+            </etudiant>
+            
+        </Etudiants>
+</Formation>

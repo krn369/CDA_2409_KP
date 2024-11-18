@@ -1,51 +1,51 @@
-<?xml version="1.0" encoding="uft-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
+
 <BankAccounts>
-    <Account id="1">
-        <AccountNumber>FR7610001100011000000000111</AccountNumber>
-        <Bank>Banque Populaire</Bank>
-        <City>Paris</City>
-        <Owner>John Doe</Owner>
-        <Balance>36813.47</Balance>
-    </Account>
+    <BankAccount>
+        <account>FR76 10001 10001 10000000001 11</account>
+        <bank>Banque Populaire</banks>
+        <city>Paris</city>
+        <owner>John Doe</owner>
+        <balance>36813.47</balance>
+    </BankAccount>
 
-    <Account id="2">
-        <AccountNumber>FR7630003300013000000001233</AccountNumber>
-        <Bank>Crédit Mutuel</Bank>
-        <City>Paris</City>
-        <Owner>Mark Zouk</Owner>
-        <Balance>5295.59</Balance>
-    </Account>
+    <BankAccount>
+        <account>FR76 30003 30001 30000000012 33</account>
+        <bank>Crédit Mutuel</banks>
+        <city>Paris</city>
+        <owner>Mark Zouk</owner>
+        <balance>5295.59</balance>
+    </BankAccount>
 
-    <Account id="3">
-        <AccountNumber>FR7630003300053000000000113</AccountNumber>
-        <Bank>Crédit Mutuel</Bank>
-        <City>Mulhouse</City>
-        <Owner>Joseph Picard</Owner>
-        <Balance>1663.14</Balance>
-    </Account>
+    <BankAccount>
+        <account>FR76 30003 30005 30000000001 13</account>
+        <bank>Crédit Mutuel</banks>
+        <city>Mulhouse</city>
+        <owner>Joseph Picard</owner>
+        <balance>1663.14</balance>
+    </BankAccount>
 
-    <Account id="4">
-        <AccountNumber>FR7630003300053000000000223</AccountNumber>
-        <Bank>Crédit Mutuel</Bank>
-        <City>Mulhouse</City>
-        <Owner>Bruce Milice</Owner>
-        <Balance>1559.3</Balance>
-    </Account>
+    <BankAccount>
+        <account>FR76 30003 30005 30000000002 23</account>
+        <bank>Crédit Mutuel</banks>
+        <city>Mulhouse</city>
+        <owner>Bruce Milice</owner>
+        <balance>1559.3</balance>
+    </BankAccount>
 
-    <Account id="5">
-        <AccountNumber>FR7630003300053000000000333</AccountNumber>
-        <Bank>Crédit Mutuel</Bank>
-        <City>Mulhouse</City>
-        <Owner>Steeve Bobs</Owner>
-        <Balance>0.66</Balance>
-    </Account>
-
-    <Account id="6">
-        <AccountNumber>FR7630003300053000000000443</AccountNumber>
-        <Bank>Crédit Mutuel</Bank>
-        <City>Mulhouse</City>
-        <Owner>Bill Bête</Owner>
-        <Balance>1500.44</Balance>
-    </Account>
-
+    <BankAccount>
+        <account>FR76 30003 30005 30000000003 33</account>
+        <bank>Crédit Mutuel</banks>
+        <city>Mulhouse</city>
+        <owner>Steeve Bobs</owner>
+        <balance>0.66</balance>
+    </BankAccount>
+    
+    <BankAccount>
+        <account>FR76 30003 30005 30000000004 43</account>
+        <bank>Crédit Mutuel</banks>
+        <city>Mulhouse</city>
+        <owner>Bill Bête</owner>
+        <balance>1500.44</balance>
+    </BankAccount>
 </BankAccounts>
