@@ -1,0 +1,42 @@
+.box {
+    border: 1px solid blue;
+    background-color: gray;
+    padding: 15px;
+}
+
+.box-flag {
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+ul {
+    margin: 0;
+    padding: 0 15px;
+}
+
+img {
+    width: 60px;
+    margin: 15px;
+}
+
+table, tr, th, td {
+    border: 1px solid blue;
+}
+
+th {
+    background-color: gray;
+}
+
+.box a {
+    color: blue;
+}
+
+header a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+}

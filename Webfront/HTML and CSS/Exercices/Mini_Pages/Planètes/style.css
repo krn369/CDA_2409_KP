@@ -1,0 +1,28 @@
+body {
+    background-image: url("./img/galaxy.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 20px);
+}
+
+section {
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 60%;
+    height: 32%;
+}
+
+.p1 {
+    width: 15%;
+}
+
+.p2 {
+    width: 20%;
+}
+
+.p3 {
+    width: 30%;
+}
