@@ -1,0 +1,41 @@
+:root {
+    --size: 800px
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-self: center;
+}
+
+.line {
+    display: flex;
+}
+
+.square {
+    width: calc(var(--size) / 9);
+    height: calc(var(--size) / 9);
+}
+
+.white {
+    background-image: url("./img/white.png");
+}
+
+.black {
+    background-image: url("./img/black.png");
+}
+
+.red {
+    background-image: url("./img/red.png");
+}
+
+@media (max-width: 830px) {
+    :root {
+        --size: 500px
+    }
+}
