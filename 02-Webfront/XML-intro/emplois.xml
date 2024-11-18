@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Emplois>
+    <Emploi>
+        <intitule>Développeur PHP</intitule>
+        <ville>Paris</ville>
+        <description>Identifie et analyse les besoins de son client/employeur via l’étude du cahier des charges. 
+        Développer des pages web dynamiques communiquant avec le serveur MySQL en utilisant entre autres LAMP 
+        (Linux, Apache, MySQL et PHP), MAMP (Mac, Apache, MySQL, PHP) ou WAMP (Windows, Apache, MySQL, PHP).</description>
+
+            <Competences>
+                <competence>PHP mais aussi d'autre langages comme JS ou SQL</competence>
+                <competence>Etre à l'aise sur les outils CMS</competence>
+                <competence>Anglais</competence>
+                <competence>Connaissance Github</competence>
+                <competence>Experience dev web</competence>
+            </Competences>
+
+        <dateDebut format="yyyy-mm-dd">2024/09/10</dateDebut>
+        <salaireannuel devise="euro">40000</salaireannuel>
+        <mail>recherche.devphp@gamil.com</mail>
+    </Emploi>
+
+    <Emploi>
+        <intitule>Développeur JAVA</intitule>
+        <ville>Mulhouse</ville>
+        <description>Rédige le cahier des charges avec le client. Créer, développer des applications, et effectuer les maj.
+        Procéder à des phases de test sur des versions bêta.</description>
+            <Competences>
+                <competence>Anglais</competence>
+                <competence>Etre à l'aise sur d'autres langages de programmation</competence>
+                <competence>Connaissance en bases de données</competence>
+                <competence>Connaissance Github</competence>
+                <competence>Maitres des frameworks Java (Spring, Hibernate...)</competence>
+            </Competences>
+        <dateDebut format="yyyy-mm-dd">2024-10-05</dateDebut>
+        <salaireannuel devise="euro">40000</salaireannuel>
+        <mail>recherche.devjava@gmail.com</mail>
+    </Emploi>
+    
+    <Emploi>
+        <intitule>Développeur NodeJS</intitule>
+        <ville>Toulouse</ville>
+        <description>Responsable de la gestion des échanges entre le serveur et les utilisateurs, l'objectif sera le développement 
+        de toute la logique côté serveur, la définition et la maintenance de la base de données centre.</description>
+            <Competences>
+                <competence>Anglais</competence>
+                <competence>Connaissance d'autres langages de programmation</competence>
+                <competence>Connaissance Github</competence>
+                <competence>Connaissance bases de données</competence>
+                <competence>Expérience Dev web</competence>
+            </Competences>
+        <dateDebut format="yyyy-mm-dd">2024-08-15</dateDebut>
+        <salaireannuel devise="euro">50000</salaireannuel>
+        <mail>recherche.devnodejs@gmail.com</mail>
+    </Emploi>
+</Emplois>

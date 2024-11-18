@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<UnionEuropeenne>
+    <Pays>
+        <nom>Fr</nom>
+        <superficie>551 695</superficie>
+        <nbrHabitant>68373433</nbrHabitant>
+    </Pays>
+
+    <Pays>
+        <nom>De</nom>
+        <superficie>357592</superficie>
+        <nbrHabitant>83360000</nbrHabitant>
+    </Pays>
+
+    <Pays>
+        <nom>It</nom>
+        <superficie>302073</superficie>
+        <nbrHabitant>58989749</nbrHabitant>
+    </Pays>
+
+    <Pays>
+        <nom>Es</nom>
+        <superficie>506030</superficie>
+        <nbrHabitant>48610458</nbrHabitant>
+    </Pays>
+    
+    <Pays>
+        <nom>Be</nom>
+        <superficie>30688</superficie>
+        <nbrHabitant>11763650</nbrHabitant>
+    </Pays>
+</UnionEuropeenne>

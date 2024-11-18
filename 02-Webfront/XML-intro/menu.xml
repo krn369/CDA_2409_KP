@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<menu>
+    <Entrees>
+        <entree>
+            <nom>Velouté d'automne</nom>
+            <prix devise="Euro">6</prix>
+            <description>Un velouté fait qu'en automne</description>
+        </entree>
+
+        <entree>
+            <nom>Oeuf mayo</nom>
+            <prix devise="Euro">2</prix>
+            <description>Des oeufs avec de la mayo</description>
+        </entree>
+
+    </Entrees>
+
+    <Plats>
+        <plat>
+            <nom>Steak Frites Salade</nom>
+            <prix>12.99</prix>
+            <description>Un steak de 120 grammes accompagné de frites fraiches et quelques feuilles de salades assaisonnées</description>
+        </plat>
+
+        <plat>
+            <nom>Burger Frites</nom>
+            <prix devise="Euro">22.99</prix>
+            <description>Un burger accompagné de frites</description>
+        </plat>
+
+        <plat>
+            <nom>Spaghetti carbonara</nom>
+            <prix devise="Euro">28.99</prix>
+            <description>Mamamiiiaa</description>
+        </plat>
+
+    </Plats>
+
+    <Desserts>
+        <dessert>
+            <nom>Tarte au citron</nom>
+            <prix devise="Euro">8</prix>
+            <description>Une tarte, avec du citron</description>
+        </dessert>
+
+        <dessert>
+            <nom>Mousse au chocolat</nom>
+            <prix devise="Euro"> 9.99</prix>
+            <description>Elle est faite maison promis</description>
+        </dessert>
+        
+    </Desserts>
+</menu>
