@@ -1,0 +1,38 @@
+* {
+    font-size: 40px;
+    color: #fff;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8px;
+    height: calc(100vh - 2 * 8px);
+}
+
+#s1 {
+    grid-column: 1 / -1;
+}
+
+#s2 {
+    grid-row: 2 / 6;
+}
+
+#s4 {
+    grid-column: 3 / 5;
+}
+
+#s5 {
+    grid-column: 2 / 4;
+}
+
+#s10 {
+    grid-column: 2 / -1;
+}
+
+main section {
+    background-color: #CCCC33;
+    padding: 8px 6px;
+}
