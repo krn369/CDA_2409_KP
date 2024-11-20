@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Trenders - Nike Sneakers</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .navbar {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar li {
+            margin: 0px 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        #Bluetxt {
+            color: #27a3dc;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.3em;
+        }
+
+        .product-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 3em;
+        }
+
+        .product-image {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .product-image i {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5em;
+        }
+
+        .product-display img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .label-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .label-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .product-display h2 {
+            font-size: 1.5em;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .product-display span {
+            font-size: large;
+            color: green;
+            background-color: rgba(144, 238, 144, 0.463);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .product-details .price {
+            font-size: 2em;
+            font-weight: bolder;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-details label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: large;
+        }
+
+        .product-details select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: inline;
+            font-size: large;
+        }
+
+        .product-details .add-to-cart {
+            background-color: #000;
+            color: white;
+            font-size: large;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .description {
+            font-size: 1em;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            text-align: justify;
+            border-radius: 10px;
+        }
+
+        .description .oneline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .product-display {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .product-image {
+                margin-bottom: 0;
+                margin-right: 2rem;
+            }
+
+            .label-container {
+                flex-direction: row;
+            }
+
+            .label-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <img src="TRENDERS.png" alt="Trenders logo">
+            <nav class="tittle">
+                <ul>
+                    <li><a href="#">VÊTEMENT</a></li>
+                    <li><a href="#">CHAUSSURES</a></li>
+                    <li><a href="#">ACCESSOIRES</a></li>
+                    <li><i class="fa-sharp fa-regular fa-snowflake" style="color: #74C0FC; font-size: 1.5em;"></i><a id="Bluetxt" href="#"> PROMO HIVER</a></li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="product-display">
+            <div class="product-image">
+                <i class="fa-solid fa-heart"></i>
+                <img src="Nike boots.jpg" alt="Nike Sneakers">
+            </div>
+
+            <div class="product-details">
+                <h2>Nike sneakers</h2>
+                <span>Tag</span>
+                <p class="price"> <sup>€</sup>127</p>
+                <div class="label-container">
+                    <div class="label-item">
+                        <label for="size-select">Taille</label>
+                        <select name="size" id="size-select">
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                        </select>
+                    </div>
+
+                    <div class="label-item">
+                        <label for="color-select">Couleur</label>
+                        <select name="color" id="color-select">
+                            <option value="bleu">Blue</option>
+                            <option value="noir">Noir</option>
+                            <option value="rouge">Rouge</option>
+                            <option value="blanc">Blanc</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="add-to-cart">Ajouter au panier</button>
+
+                <div class="description">
+                    <div class="oneline">
+                        <h3>Caractéristiques</h3>
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                    <p>Découvrez cette sneaker alliant confort et style, idéale pour les amateurs de mode urbaine. Conçue avec une empeigne en cuir de haute qualité et des empiècements en maille respirante ...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
