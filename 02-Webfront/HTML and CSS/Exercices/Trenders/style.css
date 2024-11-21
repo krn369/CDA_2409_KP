@@ -1,31 +1,25 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: white;
-  padding: 30px;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px 1fr;
 }
 
 .navbar {
-  height: 50px;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 20px
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 1.5em;
   align-items: center;
-}
-
-.navbar li {
-  margin: 0px 30px;
 }
 
 .navbar a {
@@ -49,46 +43,42 @@ nav ul {
 
 .product-display {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  margin-top: 3em;
+  justify-content: space-around;
+  gap: 3em;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+
 }
 
 .product-image {
-  position: relative;
-  margin-top: 5rem;
-  margin-left: 7rem;
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
 
 .product-image i {
-  position: absolute;
-  top: 10px;
-  left: 100px;
   font-size: 1.5em;
 }
 
 .product-display img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 
 .product-details {
-  width: 100%;
-  max-width: 500px;
-  margin-top: 70px;
+  width: 33%;
+  
 }
 
 .label-container {
     display: flex;
-    flex-direction: column;
-    gap:4em;
+
+    gap:1em;
 }
 
 .label-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 100%;
 }
 
 .product-display h2 {  
@@ -115,20 +105,20 @@ nav ul {
 }
 
 .product-details label {
-  display: block;
+  
   margin: 10px 0 5px;
   font-size: large;
   
 }
 .product-details select {
-  width: 12em;
+  width: 100%;
   padding: 5px;
   border-radius: 10px;
-  display: inline;
+  display: block;
   font-size: large;
 }
 
-.product-details .add-to-cart {
+.add-to-cart {
   background-color: #000;
   color: white;
   font-size: large;
@@ -136,7 +126,7 @@ nav ul {
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-top: 20px;
+  margin: 15px 0;
   border-radius: 10px;  
 }
 
@@ -144,34 +134,31 @@ nav ul {
   font-size: 1.1em;
   border: 1px solid #000;
   padding: 10px;
-  margin-top: 20px;
-  width: 100%;
   text-align: justify;
   border-radius: 10px;  
 }
 .description .oneline {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 900px) {
   .product-display {
-      flex-direction: row;
-      align-items: flex-start;
+      flex-direction: column;
+      
+      margin: 0;
+      width: 100%;
   }
 
   .product-image {
       margin-bottom: 0;
-      margin-right: 2rem;
   }
 
   .label-container {
-      flex-direction: row;
+      display: block;
   }
 
   .label-item {
-      flex-direction: column;
-      align-items: flex-start;
+    margin: 15px 0;
   }
 }

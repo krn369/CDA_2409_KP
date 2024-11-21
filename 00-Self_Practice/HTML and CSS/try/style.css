@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    background-color: blue;
+    color: aliceblue;
+}
+
+p:first-child{
+    background-color: yellow;
+    color: red;
+}
+
+.box {
+    margin: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 5px 15px 5px #e24d20fd;
+}
+
+.text-element {
+    text-shadow: 2px 2px 4px #888888;
+    background-color: ;
+}
