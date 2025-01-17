@@ -8,12 +8,31 @@ body {
   grid-template-rows: 80px 1fr;
 }
 
-.navbar {
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+header{
+
+
+  .navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    
+  }
+
+
+
 }
+
+
 
 nav ul {
   list-style: none;
@@ -22,12 +41,6 @@ nav ul {
   align-items: center;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.4em;
-  font-weight: bold;
-}
 
 #Bluetxt {
   color: #27a3dc;
