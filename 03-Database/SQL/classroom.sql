@@ -63,6 +63,8 @@ grade VARCHAR(1),
 city VARCHAR(20)
 );
 
+
+
 INSERT INTO student
 (rollno, name, marks, grade, city)
 VALUES
@@ -73,13 +75,139 @@ VALUES
 (105,"SITA","78","B","BHAKTAPUR"),
 (106,"NANICHORI",51,"C","BHAKTAPUR");
 
+
+
+SELECT city, avg(marks)
+FROM student
+GROUP BY city
+ORDER BY avg(marks);
+
+SELECT city, count(rollno)
+FROM student
+GROUP BY city
+HAVING max(marks) > 90;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE student
+SET grade = "A"
+WHERE marks BETWEEN 80 AND 95;
+
+UPDATE student
+SET grade = "C"
+WHERE marks BETWEEN 40 AND 60;
+
+UPDATE student
+SET grade = "B"
+WHERE marks BETWEEN 60 AND 80;
+
+UPDATE student
+SET grade = "O"
+WHERE marks > 95;
+
 SELECT * FROM student;
 
+CREATE TABLE dept (
+id INT PRIMARY KEY,
+name VARCHAR(50)
+);
+
+INSERT INTO dept
+VALUES
+(101, "english"),
+(102, "IT");
+
+UPDATE dept
+SET id = 103
+WHERE id = 102;
+
+CREATE TABLE teacher (
+id INT PRIMARY KEY,
+name VARCHAR(50),
+dept_id INT,
+FOREIGN KEY (dept_id)  REFERENCES dept(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE
+);
 
 
 
+INSERT INTO teacher
+VALUES
+(101,"Adam", 101),
+(102, "Eve", 102);
+
+SELECT * FROM teacher;
+SELECT * FROM dept;
+
+
+ALTER TABLE student
+ADD COLUMN age INT; 
+
+ALTER TABLE student
+DROP COLUMN age;
 
 
 
+ALTER TABLE student
+ADD COLUMN age INT NOT NULL DEFAULT 19;
 
+ALTER TABLE student
+MODIFY COLUMN age VARCHAR(2);
+
+ALTER TABLE student
+CHANGE age stu_age INT;
+
+
+INSERT INTO student
+(rollno, name, marks, stu_age)
+VALUES
+(107,"BOB",68,100);
+
+
+
+ALTER TABLE student
+RENAME TO students;
+
+SELECT * FROM student;
+
+ALTER TABLE students
+RENAME TO student;
+
+CREATE TABLE stu (
+id INT PRIMARY KEY,
+name VARCHAR (50)
+);
+
+INSERT INTO stu (id,name)
+VALUES
+(101, "adam"),
+(102, "bob"),
+(103, "casey");
+
+
+CREATE TABLE course (
+id INT PRIMARY KEY,
+course VARCHAR(50)
+);
+
+INSERT INTO course (id, course)
+VALUES
+(102,"english"),
+(105,"math"),
+(103,"science"),
+(107,"computer science");
+
+SELECT * FROM stu;
+SELECT * FROM course;
+
+SELECT *
+FROM stu 
+INNER JOIN course 
+ON stu.id = course.id;
+
+SELECT *
+FROM stu as s
+INNER JOIN course as c
+ON s.id = c.id;
 
