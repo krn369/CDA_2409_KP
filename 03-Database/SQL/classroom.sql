@@ -76,6 +76,13 @@ VALUES
 (106,"NANICHORI",51,"C","BHAKTAPUR");
 
 
+SELECT AVG(marks) 
+FROM student;
+
+SELECT name
+FROM student
+WHERE  marks > 82;
+
 
 SELECT city, avg(marks)
 FROM student
@@ -179,9 +186,11 @@ id INT PRIMARY KEY,
 name VARCHAR (50)
 );
 
+
+
 INSERT INTO stu (id,name)
 VALUES
-(101, "adam"),
+(101, "karan"),
 (102, "bob"),
 (103, "casey");
 
@@ -198,7 +207,7 @@ VALUES
 (103,"science"),
 (107,"computer science");
 
-SELECT * FROM stu;
+
 SELECT * FROM course;
 
 SELECT *
@@ -208,6 +217,58 @@ ON stu.id = course.id;
 
 SELECT *
 FROM stu as s
-INNER JOIN course as c
+RIGHT JOIN course as c
 ON s.id = c.id;
+
+SELECT * FROM stu as a
+LEFT JOIN course as b
+ON a.id = b.id
+UNION 
+SELECT * FROM stu as a
+RIGHT JOIN course as b
+ON a.id = b.id;
+
+
+
+SELECT * FROM stu as a
+LEFT JOIN course as b
+ON a.id = b.id
+WHERE b.id IS NULL; 
+
+SELECT * FROM stu as a
+RIGHT JOIN course as b
+ON a.id = b.id
+WHERE a.id IS NULL; 
+
+
+CREATE TABLE employee (
+id INT PRIMARY KEY,
+name VARCHAR (50),
+manager_id INT
+);
+
+INSERT INTO employee (id, name, manager_id)
+VALUES
+(101,"karan",103),
+(102,"rojita",104),
+(103,"khusi",NULL),
+(104,"ramesita",103);
+
+SELECT * FROM employee;
+
+SELECT a.name as manager_name, b.name 
+FROM employee as a
+JOIN employee as b
+ON a.id = b.manager_id;
+
+SELECT name FROM employee
+UNION ALL
+SELECT name FROM stu;
+
+SELECT name FROM employee
+UNION 
+SELECT name FROM stu;
+
+
+
 
