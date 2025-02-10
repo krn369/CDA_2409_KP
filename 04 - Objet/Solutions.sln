@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliothequeDeClassBouteille", "Bouteille\BibliothequeDeClassBouteille\BibliothequeDeClassBouteille.csproj", "{FAA26A44-3310-49F5-B220-76106A2835D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solution_Bouteille", "Bouteille\Solution_Bouteille\Solution_Bouteille.csproj", "{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryUTB", "Une transaction boursière\ClassLibraryUTB\ClassLibraryUTB.csproj", "{15AF633A-62A2-4756-8295-E38EA283D89A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UneTransactionBoursiere", "Une transaction boursière\UneTransactionBoursiere\UneTransactionBoursiere.csproj", "{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExoBouteille", "ExoBouteille", "{FC88A992-E34A-4F6E-A8C6-B63E2F28C57B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExoTransaction", "ExoTransaction", "{CC0F04A0-50D0-4C6C-82EC-F1B824472F79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAA26A44-3310-49F5-B220-76106A2835D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA26A44-3310-49F5-B220-76106A2835D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA26A44-3310-49F5-B220-76106A2835D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA26A44-3310-49F5-B220-76106A2835D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15AF633A-62A2-4756-8295-E38EA283D89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15AF633A-62A2-4756-8295-E38EA283D89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15AF633A-62A2-4756-8295-E38EA283D89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15AF633A-62A2-4756-8295-E38EA283D89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAA26A44-3310-49F5-B220-76106A2835D9} = {FC88A992-E34A-4F6E-A8C6-B63E2F28C57B}
+		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907} = {FC88A992-E34A-4F6E-A8C6-B63E2F28C57B}
+		{15AF633A-62A2-4756-8295-E38EA283D89A} = {CC0F04A0-50D0-4C6C-82EC-F1B824472F79}
+		{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE} = {CC0F04A0-50D0-4C6C-82EC-F1B824472F79}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {216AAD21-DFDE-4513-ADC1-16B483052CC6}
+	EndGlobalSection
+EndGlobal
