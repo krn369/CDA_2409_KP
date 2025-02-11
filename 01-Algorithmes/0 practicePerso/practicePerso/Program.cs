@@ -18,6 +18,8 @@ namespace MyNamespace
         }
     }
      
+    public class Cat (string firstname) { 
+    }
     public class MyApp
     {
        public static void Main(string[] args)
