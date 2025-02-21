@@ -75,12 +75,13 @@ namespace BibliothequeDeClassBouteille
         // Method to empty the bottle completely
         public bool Vider()
         {
-            if (estOuverte)
-            {
-                contenuEnLitre = 0;
-                return true; // Successfully emptied
-            }
-            return false; // Bottle is closed
+            //if (estOuverte)
+            //{
+            //    contenuEnLitre = 0;
+            //    return true; // Successfully emptied
+            //}
+            //return false; // Bottle is closed
+            return Vider(contenuEnLitre);
         }
 
         // Method to empty a specific quantity from the bottle
@@ -98,12 +99,14 @@ namespace BibliothequeDeClassBouteille
         // Method to fill the bottle completely
         public bool Remplir()
         {
-            if (estOuverte)
-            {
-                contenuEnLitre = contenanceEnLitre;
-                return true; // Successfully filled
-            }
-            return false; // Bottle is closed
+            //if (estOuverte)
+            //{
+            //    contenuEnLitre = contenanceEnLitre;
+            //    return true; // Successfully filled
+            //}
+            //return false; // Bottle is closed
+
+            return Remplir(contenanceEnLitre - contenuEnLitre);
         }
 
         // Method to fill a specific quantity into the bottle
