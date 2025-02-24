@@ -1,0 +1,21 @@
+[
+    {
+      "Passenger Id": 1,
+      "Name": "Alice Dupont",
+      "Age": 28,
+      "Destination": "Paris"
+    },
+    {
+      "Passenger Id": 2,
+      "Name": "Jean Martin",
+      "Age": 35,
+      "Destination": "Lyon"
+    },
+    {
+      "Passenger Id": 3,
+      "Name": "Sophie Bernard",
+      "Age": 22,
+      "Destination": "Marseille"
+    }
+  ]
+  

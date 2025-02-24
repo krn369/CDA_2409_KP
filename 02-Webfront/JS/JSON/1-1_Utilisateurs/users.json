@@ -1,0 +1,39 @@
+{
+    "users" : [
+        {
+            "id" : 101,
+            "nom_Utilisateur" : "kpariyar",
+            "nom" : "PARIYAR",
+            "prenom" : "Karan",
+            "date_de_naissance" : "14-09-1998"
+        },
+        {
+            "id" : 102,
+            "nom_Utilisateur" : "krojrin",
+            "nom" : "RANJITKAR",
+            "prenom" : "Rojita",
+            "date_de_naissance" : "15-08-1995"
+        },
+        {
+            "id" : 103,
+            "nom_Utilisateur" : "ramesita",
+            "nom" : "SUKUPAYO",
+            "prenom" : "Sita",
+            "date_de_naissance" : "01-01-1978"
+        },
+        {
+            "id" : 104,
+            "nom_Utilisateur" : "sitaram",
+            "nom" : "PARIYAR",
+            "prenom" : "Ramesh",
+            "date_de_naissance" : "02-02-1977"
+        },
+        {
+            "id" : 105,
+            "nom_Utilisateur" : "heureuse100",
+            "nom" : "PARIYAR",
+            "prenom" : "Khusi",
+            "date_de_naissance" : "15-01-2006"
+        }
+    ]
+}
