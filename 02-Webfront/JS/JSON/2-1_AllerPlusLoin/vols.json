@@ -1,0 +1,23 @@
+[
+    {
+      "Flight Number": "AF1234",
+      "Destination": "New York",
+      "Departure Time": "2025-02-24T14:30:00"
+    },
+    {
+      "Flight Number": "AF5678",
+      "Destination": "Tokyo",
+      "Departure Time": "2025-02-24T16:00:00"
+    },
+    {
+      "Flight Number": "AF9101",
+      "Destination": "London",
+      "Departure Time": "2025-02-24T18:45:00"
+    },
+    {
+      "Flight Number": "AF1122",
+      "Destination": "Dubai",
+      "Departure Time": "2025-02-24T20:15:00"
+    }
+  ]
+  
