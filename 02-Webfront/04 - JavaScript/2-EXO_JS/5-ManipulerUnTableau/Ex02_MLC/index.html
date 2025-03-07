@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des personnes inscrites</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Liste des personnes inscrites</h1>
+
+    <!-- Form to add a new person -->
+    <form id="add-person-form">
+        <label for="first-name">Prénom:</label>
+        <input type="text" id="first-name" name="first-name" required minlength="2">
+        
+        <label for="last-name">Nom:</label>
+        <input type="text" id="last-name" name="last-name" required minlength="2">
+        
+        <button type="submit">Ajouter</button>
+    </form>
+    <p id="message"></p>
+
+    <!-- List of people -->
+    <ul id="people-list"></ul>
+
+    <!-- Table of people -->
+    <table id="people-table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
