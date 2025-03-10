@@ -1,4 +1,4 @@
-const people = ['Mike Dev', 'Léa Grande'];
+const people = ['Mike Dev', 'John Makenzie',  'Léa Grande'];
 
 function generateEmail(firstName, lastName) {
     return `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.com`;
@@ -71,7 +71,7 @@ document.getElementById('add-person-form').addEventListener('submit', (event) =>
         return;
     }
 
-    if (!/^[A-Za-z]+$/.test(firstName) || !/^[A-Za-z]+$/.test(lastName)) {
+    if (!/^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/.test(firstName) || !/^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/.test(lastName)) {
         alert('Le nom et le prénom ne peuvent contenir que des lettres.');
         return;
     }
