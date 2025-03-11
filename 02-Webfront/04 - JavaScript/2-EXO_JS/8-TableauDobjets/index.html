@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace membres</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <h1>Espace membres</h1>
+    <div id="error-message" class="hidden"></div> <!-- Placeholder for error messages, initially hidden -->
+    <form id="login-form">
+        <h4>Identification</h4>
+        <label for="username">Identifiant:</label>  <!-- Label for username input -->
+        <input type="text" id="username" name="username" required> <!-- Username input field -->
+        <br>
+        <br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <br>
+        <button type="submit">Connexion</button>
+    </form>
+    <div id="user-info" class="hidden"> <!-- Section to display user info, initially hidden -->
+        <div class="box1">
+            <p id="welcome-message"></p>
+            <button id="logout-button">Déconnexion</button>
+        </div>
+
+        <table id="user-table"> <!-- Table to display user details -->
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Date de naissance</th>
+                    <th>Email</th>
+                    <th>Salaire</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

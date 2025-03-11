@@ -1,0 +1,62 @@
+body {
+    font-family:Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d3bdb0;
+    border: 2px solid black;
+    padding: 10px;
+    color: #69385c; 
+}
+
+h1 {
+    color: #715b64;
+}
+
+#login-form {
+    border: 2px dotted #89937c;
+    padding: 5px 10px;
+}
+button, input, .hidden {
+    color: #715b64;
+    background-color: #d3bdb0;
+    border: 2px solid #89937c;
+    padding: 5px
+
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: #715b64;
+    border: 2px solid #89937c;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+}
+
+#user-table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#user-table th, #user-table td {
+    border: 2px solid #89937c;
+    padding: 8px;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+tbody tr:hover{
+   background-color: #715b64; 
+   color: #beab9d;
+   font-weight: bold;
+}
