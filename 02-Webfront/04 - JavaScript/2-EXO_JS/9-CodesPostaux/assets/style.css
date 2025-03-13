@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container with French Flag Dotted Border */
+.container {
+    border: 5px dotted;
+    border-image: linear-gradient(to right, #0055A4 33%, white 33%, white 66%, #EF4135 66%) 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Search Container */
+label {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9;
+}
+
+datalist {
+    display: none; /* Hide the datalist dropdown */
+}
+
+/* Search Button */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* City Information Display */
+#cityInfo {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Positive Response (City Found) */
+#cityInfo.positive {
+    background-color: #e8f5e9; /* Light green */
+    border: 2px solid #4caf50; /* Green border */
+}
+
+/* Negative Response (No City Found) */
+#cityInfo.negative {
+    background-color: #ffebee; /* Light red */
+    border: 2px solid #ef5350; /* Red border */
+}
+
+#cityInfo h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#cityInfo p {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}

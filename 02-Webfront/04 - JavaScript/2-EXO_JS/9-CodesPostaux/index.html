@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recherche de Villes par Code Postal</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <h1>Recherche de Villes par Code Postal</h1>
+    <div class="container">
+        <h1>Recherche de Villes par Code Postal</h1>
 
-    <!-- Search input field -->
-    <label for="citySearch">Entrez un code postal :</label>
-    <input type="text" id="citySearch" list="citySuggestions" placeholder="ex: 10200">
-    
-    <!-- Datalist for suggestions -->
-    <datalist id="citySuggestions"></datalist>
+        <!-- Search input field -->
+        <label for="citySearch">Entrez un code postal :</label>
+        <input type="text" id="citySearch" list="citySuggestions" placeholder="ex: 10200">
+        
+        <!-- Datalist for suggestions -->
+        <datalist id="citySuggestions"></datalist>
 
-    <!-- Button to trigger the search -->
-    <button id="searchButton">Rechercher</button>
+        <!-- Button to trigger the search -->
+        <button id="searchButton">Rechercher</button>
 
-    <!-- Div to display the city information -->
-    <div id="cityInfo"></div>
+        <!-- Div to display the city information -->
+        <div id="cityInfo"></div>
+    </div>
 
     <!-- Include the JavaScript file -->
     <script src="./assets/script.js"></script>
