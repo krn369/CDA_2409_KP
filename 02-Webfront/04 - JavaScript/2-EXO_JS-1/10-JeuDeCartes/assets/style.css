@@ -1,0 +1,177 @@
+/* Define CSS variables for dark mode */
+:root {
+    --background-color: #1e1e2f; /* Dark background */
+    --text-color: #ffffff; /* White text */
+    --accent-color: #ff6f61; /* Coral accent color */
+    --table-bg: #2a2a3f; /* Dark table background */
+    --table-row-even: #333348; /* Even row color */
+    --table-row-hover: #3a3a4f; /* Row hover color */
+    --stat-bg: #2a2a3f; /* Statistics background */
+    --toggle-bg: #444; /* Toggle background */
+    --toggle-handle: #fff; /* Toggle handle color */
+}
+
+/* Define CSS variables for light mode */
+[data-theme="light"] {
+    --background-color: #f4f4f9; /* Light background */
+    --text-color: #333; /* Dark text */
+    --accent-color: #ff6f61; /* Coral accent color */
+    --table-bg: #ffffff; /* White table background */
+    --table-row-even: #f9f9f9; /* Even row color */
+    --table-row-hover: #e0e0e0; /* Row hover color */
+    --stat-bg: #ffffff; /* Statistics background */
+    --toggle-bg: #ff6f61; /* Toggle background */
+    --toggle-handle: #fff; /* Toggle handle color */
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Font family */
+    background-color: var(--background-color); /* Dynamic background color */
+    color: var(--text-color); /* Dynamic text color */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding */
+    line-height: 1.6; /* Line height for better readability */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+}
+
+/* Heading styles */
+h1, h2 {
+    color: var(--accent-color); /* Dynamic accent color */
+    text-align: center; /* Center align headings */
+    margin-bottom: 20px; /* Add margin below headings */
+}
+
+h1 {
+    font-size: 2.5em; /* Large font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 3px; /* Add letter spacing */
+}
+
+h2 {
+    font-size: 2em; /* Medium font size */
+    margin-top: 40px; /* Add margin above the heading */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.2em; /* Font size */
+    text-align: center; /* Center align text */
+    margin: 10px 0; /* Add margin */
+}
+
+/* Table styles */
+#card-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove space between cells */
+    margin: 20px 0; /* Add margin */
+    background-color: var(--table-bg); /* Dynamic table background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#card-table th, #card-table td {
+    padding: 12px 15px; /* Add padding */
+    text-align: center; /* Center align text */
+    border-bottom: 1px solid #ddd; /* Add border */
+}
+
+#card-table th {
+    background-color: var(--accent-color); /* Dynamic header background */
+    color: var(--background-color); /* Dynamic header text color */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Add letter spacing */
+}
+
+#card-table tbody tr:hover {
+    background-color: var(--table-row-hover); /* Dynamic hover color */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+#card-table tbody tr:nth-child(even) {
+    background-color: var(--table-row-even); /* Dynamic even row color */
+}
+
+/* Statistics section styles */
+#most-played, #best-ratio {
+    font-size: 1.3em; /* Font size */
+    color: var(--accent-color); /* Dynamic accent color */
+    font-weight: bold; /* Bold text */
+    margin: 20px 0; /* Add margin */
+    padding: 10px; /* Add padding */
+    background-color: var(--stat-bg); /* Dynamic background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+    text-align: center; /* Center align text */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+    position: fixed; /* Fixed position */
+    top: 20px; /* Distance from top */
+    right: 20px; /* Distance from right */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.toggle-label {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center align items */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.toggle-text {
+    margin-right: 10px; /* Add margin */
+    font-size: 1em; /* Font size */
+    color: var(--text-color); /* Dynamic text color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.toggle-handle {
+    width: 40px; /* Width */
+    height: 20px; /* Height */
+    background-color: var(--toggle-bg); /* Dynamic background */
+    border-radius: 20px; /* Rounded corners */
+    position: relative; /* Relative positioning */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.toggle-handle::after {
+    content: ''; /* Empty content */
+    width: 16px; /* Width */
+    height: 16px; /* Height */
+    background-color: var(--toggle-handle); /* Dynamic handle color */
+    border-radius: 50%; /* Circular shape */
+    position: absolute; /* Absolute positioning */
+    top: 2px; /* Distance from top */
+    left: 2px; /* Distance from left */
+    transition: transform 0.3s ease; /* Smooth handle transition */
+}
+
+#theme-switch:checked + .toggle-label .toggle-handle::after {
+    transform: translateX(20px); /* Move handle to the right */
+}
+
+#theme-switch {
+    display: none; /* Hide the checkbox */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1; /* End visible */
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Apply fade-in animation to headings, table, and statistics */
+h1, h2, #card-table, #most-played, #best-ratio {
+    animation: fadeIn 1s ease-out; /* Apply animation */
+}

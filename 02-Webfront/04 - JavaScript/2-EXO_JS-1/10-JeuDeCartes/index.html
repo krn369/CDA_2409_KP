@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Set character encoding to UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Jeu de Cartes</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!-- Dark/Light Mode Toggle -->
+    <div class="theme-toggle">
+        <!-- Checkbox input for the toggle switch -->
+        <input type="checkbox" id="theme-switch">
+        <!-- Label for the toggle switch -->
+        <label for="theme-switch" class="toggle-label">
+            <!-- Text that changes based on the theme -->
+            <span class="toggle-text">Dark Mode</span>
+            <!-- Handle of the toggle switch -->
+            <span class="toggle-handle"></span>
+        </label>
+    </div>
+
+    <!-- Main heading -->
+    <h1>Jeu de Cartes</h1>
+    <!-- Table to display card data -->
+    <table id="card-table">
+        <thead>
+            <!-- Table header row -->
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Niveau</th>
+                <th>Puissance</th>
+                <th>Attaque</th>
+                <th>Armure</th>
+                <th>Dégâts</th>
+                <th>Mitigation</th>
+                <th>Jouées</th>
+                <th>Victoires</th>
+                <th>Défaites</th>
+                <th>Nuls</th>
+            </tr>
+        </thead>
+        <!-- Table body (will be populated dynamically using JavaScript) -->
+        <tbody></tbody>
+    </table>
+
+    <!-- Statistics section -->
+    <h2>Statistiques</h2>
+    <!-- Paragraph to display the most played card -->
+    <p id="most-played"></p>
+    <!-- Paragraph to display the card with the best victory/defeat ratio -->
+    <p id="best-ratio"></p>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="./assets/script.js"></script>
+</body>
+</html>
