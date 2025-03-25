@@ -1,21 +1,33 @@
 export class Pays {
-    // Static regex patterns for validation
-    static regexCodePays = /^[A-Za-z]{2}$/;
-    static regexNomPays = /^[A-Za-z]{4,}$/;
-
-    constructor(codePays, nomPays) {
-        // Validate and format country code
-        if (!Pays.regexCodePays.test(codePays)) {
-            throw new Error('Le code pays doit contenir exactement 2 lettres non accentuées');
-        }
-        
-        // Validate and format country name
-        if (!Pays.regexNomPays.test(nomPays)) {
-            throw new Error('Le nom du pays doit contenir au moins 4 lettres non accentuées');
-        }
-
-        // Format properties
-        this.country_code = codePays.toUpperCase();
-        this.country_name = nomPays.charAt(0).toUpperCase() + nomPays.slice(1).toLowerCase();
+    constructor(code, nom) {
+      this.code = this.validerCode(code);
+      this.nom = this.validerNom(nom);
     }
-}
+  
+    validerCode(code) {
+      const codeNettoye = code.trim();
+      if (!/^[A-Za-z]{2}$/.test(codeNettoye)) {
+        throw new Error('Le code pays doit contenir exactement 2 lettres non accentuées');
+      }
+      return codeNettoye.toUpperCase();
+    }
+  
+    validerNom(nom) {
+      const nomNettoye = nom.trim();
+      
+      if (nomNettoye.length < 4) {
+        throw new Error('Le nom du pays doit contenir au moins 4 caractères');
+      }
+      
+      // Allow letters, spaces, hyphens, apostrophes and international characters
+      if (!/^[\p{L}\s'-]+$/u.test(nomNettoye)) {
+        throw new Error('Le nom contient des caractères non autorisés');
+      }
+      
+      // Capitalize each word
+      return nomNettoye.split(/(\s|-)+/)
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ')
+        .replace(/\s+/g, ' ');
+    }
+  }

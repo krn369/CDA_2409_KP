@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un Pays</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/pays.css">
-    <script src="./assets/1-ajouter.js" type="module"></script>
+
+    <!-- Change script tag based on which version you want to use -->
+<!-- For OOP version: -->
+<script src="./assets/1-ajouter-objet.js" ></script>
+
+<!-- For functional version: -->
+<script src="./assets/1-ajouter.js"  type="module"  ></script>
+
+
 </head>
 <body>
     <header>
-        <h1 id="titre">Ajouter un pays</h1>
+        <h1 id="titre"> <i class="fas fa-globe-europe"></i> Gestion des Pays</h1>
     </header>
-
     <main>
+        <!-- Form section -->
         <section class="form-section">
             <form id="countryForm">
-                <div>
+                <div class="form-group">
                     <label for="codePays">Code Pays (2 lettres)</label>
-                    <input id="codePays" name="code_pays" type="text" required 
-                           placeholder="FR" maxlength="2" pattern="[A-Za-z]{2}">
+                    <input id="codePays" type="text" required placeholder="FR">
                 </div>
-
-                <div>
+                <div class="form-group">
                     <label for="nomPays">Nom du Pays</label>
-                    <input id="nomPays" name="nom_pays" type="text" required
-                           placeholder="France" minlength="4" pattern="[A-Za-zÀ-ÿ\s]+">
+                    <input id="nomPays" type="text" required placeholder="France">
                 </div>
-
-                <div id="next">
-                    <button type="submit" id="validate">Ajouter</button>
-                </div>
-
-                <div id="result">
-                    <!-- Messages d'erreur ou de succès -->
-                </div>
+                <button type="submit">Ajouter</button>
+                <div id="result"></div>
             </form>
         </section>
 
+        <!-- Countries table -->
         <section class="table-section">
-            <h2>Liste des Pays Ajoutés</h2>
+            <h2>Pays Enregistrés</h2>
             <table id="countryTable">
                 <thead>
                     <tr>
@@ -47,9 +48,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody id="countryTableBody">
-                    <!-- Pays seront ajoutés ici dynamiquement -->
-                </tbody>
+                <tbody id="countryTableBody"></tbody>
             </table>
         </section>
     </main>
