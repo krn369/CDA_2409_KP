@@ -1,4 +1,8 @@
 {
-    "country_code": "BE",
-    "country_name": "Belgique"
-}
+    "code": "BE",
+    "nom": "Belgique",
+    "capitale": "Bruxelles",
+    "population": "11.5 millions",
+    "langue": "Néerlandais, Français, Allemand",
+    "description": "Pays connu pour son chocolat et ses frites"
+  }
