@@ -3,53 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application de gestion des pays">
     <title>Ajouter un Pays</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/pays.css">
-
-    <!-- Change script tag based on which version you want to use -->
-<!-- For OOP version: -->
-<script src="./assets/1-ajouter-objet.js" ></script>
-
-<!-- For functional version: -->
-<script src="./assets/1-ajouter.js"  type="module"  ></script>
-
-
+    
+    <!-- Version orientée objet -->
+    <script src="./assets/1-ajouter-objet.js"  type="module" ></script>
+    
+    <!-- Version fonctionnelle -->
+    <!-- <script src="./assets/1-ajouter.js" type="module" defer></script> -->
 </head>
 <body>
     <header>
-        <h1 id="titre"> <i class="fas fa-globe-europe"></i> Gestion des Pays</h1>
+        <h1 id="titre"><i class="fas fa-globe-europe" aria-hidden="true"></i> Gestion des Pays</h1>
     </header>
+    
     <main>
-        <!-- Form section -->
-        <section class="form-section">
+        <!-- Section du formulaire -->
+        <section class="form-section" aria-labelledby="form-title">
+            <h2 id="form-title" class="visually-hidden">Formulaire d'ajout de pays</h2>
             <form id="countryForm">
                 <div class="form-group">
                     <label for="codePays">Code Pays (2 lettres)</label>
-                    <input id="codePays" type="text" required placeholder="FR">
+                    <input id="codePays" type="text" required placeholder="FR" maxlength="2" pattern="[A-Za-z]{2}">
                 </div>
                 <div class="form-group">
                     <label for="nomPays">Nom du Pays</label>
                     <input id="nomPays" type="text" required placeholder="France">
                 </div>
                 <button type="submit">Ajouter</button>
-                <div id="result"></div>
+                <div id="result" role="alert"></div>
             </form>
         </section>
 
-        <!-- Countries table -->
-        <section class="table-section">
-            <h2>Pays Enregistrés</h2>
-            <table id="countryTable">
-                <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Nom</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="countryTableBody"></tbody>
-            </table>
+        <!-- Tableau des pays -->
+        <section class="table-section" aria-labelledby="table-title">
+            <h2 id="table-title">Pays Enregistrés</h2>
+            <div class="table-responsive">
+                <table id="countryTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="countryTableBody"></tbody>
+                </table>
+            </div>
         </section>
     </main>
 </body>
