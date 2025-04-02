@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Évaluation | Gestion des Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Résultat de l'évaluation</h1>
+
+        <!-- Form to add new students -->
+        <form id="form-etudiant">
+            <h2>Ajouter une note</h2>
+            <div class="form-group">
+                <label for="nom">Nom Prénom : </label>
+                <input type="text" id="nom" required>
+                <small class="error-message">Le nom et prénom doivent contenir au moins 2 lettres chacun</small>
+            </div>
+            <div class="form-group">
+                <label for="note">Note : </label>
+                <input type="number" id="note" min="0" max="20" value="0" required>
+                <small class="error-message">La note doit être entre 0 et 20</small>
+            </div>
+            <button type="submit">Ajouter</button>            
+        </form>
+
+        <!-- Table to display student data -->
+        <table id="tableau-notes">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Note</th>
+                    <th>Obtenu</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Statistics section -->
+        <div id="statistiques">
+            <ul>
+                <li>Nombre d'étudiants : <span id="nombre-etudiants">0</span></li>
+                <li>Moyenne de la classe : <span id="moyenne">0</span></li>
+                <li>Nombre d'étudiants au dessus de la moyenne : <span id="auDessusMoyenne">0</span> </li>
+                <li>Note éliminatoire : <span>12</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
