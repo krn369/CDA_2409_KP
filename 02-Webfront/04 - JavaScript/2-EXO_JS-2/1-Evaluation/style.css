@@ -1,0 +1,147 @@
+:root {
+    --color1: #30343F;    /* Dark blue-gray for text and borders */
+    --color2: #FAFAFF;    /* Off-white for background */
+    --color3: #E4D9FF;    /* Light purple for accents */
+    --color4: #374479;    /* Dark blue for headers */
+    --color5: #6E7799;    /* Medium gray-blue for secondary elements */
+    --color6: #C490D1;    /* Light purple for highlights */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color2);
+    color: var(--color1);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--color4);
+    border-bottom: 2px solid var(--color3);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--color5);
+    margin-top: 30px;
+}
+
+/* Form styles */
+#form-etudiant {
+    background-color: var(--color2);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color3);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color4);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color5);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--color4);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--color6);
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.9em;
+    display: none;
+    margin-top: 5px;
+}
+
+/* Table styles */
+#tableau-notes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#tableau-notes th {
+    background-color: var(--color4);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+#tableau-notes td {
+    padding: 10px;
+    border-bottom: 1px solid var(--color3);
+}
+
+#tableau-notes tr:nth-child(even) {
+    background-color: var(--color2);
+}
+
+.obtenu-oui {
+    color: #5cb85c;
+    font-weight: bold;
+}
+
+.obtenu-non {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Statistics styles */
+#statistiques {
+    background-color: var(--color2);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color3);
+}
+
+#statistiques ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#statistiques li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--color5);
+}
+
+#statistiques li:last-child {
+    border-bottom: none;
+}
+
+#statistiques span {
+    font-weight: bold;
+    color: var(--color4);
+}
