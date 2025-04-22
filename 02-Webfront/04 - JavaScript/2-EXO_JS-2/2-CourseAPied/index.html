@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Course 10000m - Résultats</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Résultat de la course - 10000m</h1>
+        </header>
+
+        <section class="stats">
+            <p>
+                {{ filteredParticipants.length }} participants |
+                Gagnant : {{ winner.nom }} |
+                Temps moyen : {{ averageTime }}
+            </p>
+        </section>
+
+        <section class="filters">
+            <div v-for="country in availableCountries" :key="country" class="filter-item">
+                <input 
+                    type="checkbox" 
+                    :id="'filter-' + country"
+                    :value="country"
+                    v-model="selectedCountries"
+                >
+                <label :for="'filter-' + country">{{ country }}</label>
+            </div>
+        </section>
+
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Pays</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Temps final</th>
+                    <th>Écart gagnant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="participant in filteredParticipants" :key="participant.nom">
+                    <td>{{ participant.pays }}</td>
+                    <td>{{ getLastName(participant.nom) }}</td>
+                    <td>{{ getFirstName(participant.nom) }}</td>
+                    <td>{{ formatTime(participant.temps) }}</td>
+                    <td>{{ formatTimeDifference(participant.temps) }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
