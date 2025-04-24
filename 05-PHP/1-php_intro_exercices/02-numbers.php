@@ -43,7 +43,7 @@ echo getMulti(2314.645, 465.987);
 function getDiv(int $x, int $y) : float
 {
     if( $y == 0){
-        return 0.0;
+        return 0;
     }
     $result =  $x / $y;
     return round($result, 2);  // Limitez le résultat à 2 décimales (arrondi)
