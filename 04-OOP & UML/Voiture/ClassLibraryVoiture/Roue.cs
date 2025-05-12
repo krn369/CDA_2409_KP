@@ -6,52 +6,68 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryVoiture
 {
-    // Roue (Wheel) class represents a car wheel
+    // Roue class
     public class Roue
     {
-        // Fields
-        private string marqueRoue; // Brand of the wheel
-        private bool tourne;  // Whether the wheel is turning
-        private int tailleEnMM; // Size of the wheel in millimeters
+        private string marqueRoue;
+        private bool tourne;
+        private int tailleEnMM;
 
-        // Constructors
+        public bool Tourne => tourne; // Read-only access
+
+        // Default constructor
         public Roue()
         {
-            // Default constructor
-            this.marqueRoue = "";
-            this.tourne = false;
-            this.tailleEnMM = 0;
+            marqueRoue = "Michelin";
+            tourne = false;
+            tailleEnMM = 15;
         }
 
+        // Parameterized constructor
         public Roue(int tailleEnMM, bool tourne, string marqueRoue)
         {
-            // Constructor with parameters
+            if (tailleEnMM < 0)
+                throw new ArgumentException("Tire size must be positive");
+
             this.tailleEnMM = tailleEnMM;
             this.tourne = tourne;
             this.marqueRoue = marqueRoue;
         }
 
+        // Copy constructor
         public Roue(Roue roueACopier)
         {
-            // Copy constructor
-            this.tailleEnMM = roueACopier.tailleEnMM;
-            this.tourne = roueACopier.tourne;
             this.marqueRoue = roueACopier.marqueRoue;
+            this.tourne = roueACopier.tourne;
+            this.tailleEnMM = roueACopier.tailleEnMM;
         }
 
-        // Methods
-        public bool Tourne(bool tourne)
+        // Start rotating
+        public bool Tourner()
         {
-            // Sets the wheel to turn or stop
-            this.tourne = tourne;
-            return this.tourne;
+            if (!tourne)
+            {
+                tourne = true;
+                return true;
+            }
+            return false;
         }
 
+        // Stop rotating
+        public bool ArreterTourner()
+        {
+            if (tourne)
+            {
+                tourne = false;
+                return true;
+            }
+            return false;
+        }
+
+        // String representation
         public override string ToString()
         {
-            // Returns a string representation of the wheel
-            return $"Marque de roue : {marqueRoue}, Taille : {tailleEnMM}mm, Tourne: {tourne}";
-
+            return $"Roue [Marque: {marqueRoue}, Tourne: {tourne}, Taille: {tailleEnMM}mm]";
         }
     }
 }

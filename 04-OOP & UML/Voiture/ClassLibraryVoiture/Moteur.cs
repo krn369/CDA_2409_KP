@@ -6,69 +6,58 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryVoiture
 {
-    // Moteur (Engine) class represents a car engine
+    // Moteur class
     public class Moteur
     {
-        // Fields
-        private string type; // Type of the engine
-        private bool estDemarre; // Whether the engine is started or not
+        private string type; // What kind of engine?
+        private bool estDemarre; // Whether the engine is running ?
 
-        // Constructors
-        public Moteur()
-        {
-            // Default constructor
-            this.type = "";
-            this.estDemarre = false;
-        }
+        // Default constructor calls parameterized constructor  // Creates a Diesel engine that's not running
+        public Moteur() : this("Diesel", false) { }
 
+        // Parameterized constructor
         public Moteur(string type, bool estDemarre)
         {
-            // Constructor with parameters
             this.type = type;
             this.estDemarre = estDemarre;
         }
 
-        public Moteur(Moteur moteurACopier)
-        {
-            // Copy constructor
-            this.type = moteurACopier.type;
-            this.estDemarre = moteurACopier.estDemarre;
-        }
+        // Copy constructor calls parameterized constructor
+        public Moteur(Moteur moteurACopier) : this(moteurACopier.type, moteurACopier.estDemarre) { }
 
-        // Methods
-        public bool DemarreMoteur()
+        public bool DemarrerMoteur()
         {
-            // Starts the engine
-            this.estDemarre = false;
-            return this.estDemarre;
-        }
-
-        public bool ArreteMoteur()
-        {
-            // Stops the engine
-            this.estDemarre = false;
-            return this.estDemarre;
-        }
-
-        public bool EntrainerRouesMotrices(Roue r1, Roue r2)
-        {
-            //Makes the motor turn the driving wheels
-            if (this.estDemarre)
+            if (!estDemarre)
             {
-                r1.Tourne(true);
-                r2.Tourne(true);
+                estDemarre = true;
                 return true;
             }
             return false;
         }
 
-        public override string ToString()
+        public bool ArreterMoteur()
         {
-            // Returns a string representation of the engine
-            return $"Type de Moteur : {type}, Démarré : {estDemarre}";
-        
+            if (estDemarre)
+            {
+                estDemarre = false;
+                return true;
+            }
+            return false;
         }
 
+        public bool Entrainer2RouesMotrices(Roue r1, Roue r2)
+        {
+            if (estDemarre && !r1.Tourne && !r2.Tourne)
+            {
+                r1.Tourner();
+                r2.Tourner();
+                return true;
+            }
+            return false;
+        }
 
+        public override string ToString() =>
+            $"Moteur [Type: {type}, EstDemarre: {estDemarre}]";
     }
+
 }
