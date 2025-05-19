@@ -5,7 +5,7 @@
     {
         private string marqueRoue;  // Wheel brand (e.g., Michelin)
         private bool tourne;        // Whether the wheel is spinning?
-        private double tailleEnPouces;     // Wheel size with tyre (diameter) in millimeters 
+        private double tailleEnPouces;     // Wheel size with tyre (diameter) in inches
         public bool Tourne => tourne; // Read-only access
 
         // Default constructor delegates to parameterized one : Creates a 215mm Michelin Wheel that's not spinning
@@ -25,7 +25,11 @@
 
 
         // Copy constructor delegates to parameterized constructor : Creates a copy of another wheel
-        public Roue(Roue roueACopier) : this(roueACopier.tailleEnPouces, roueACopier.tourne, roueACopier.marqueRoue) { }
+        public Roue(Roue roueACopier) : this(
+            roueACopier.tailleEnPouces, 
+            roueACopier.tourne, 
+            roueACopier.marqueRoue) 
+        { }
 
         // Methods
 
@@ -53,7 +57,7 @@
 
         // ToString(): Returns wheel info as text
         public override string ToString() =>
-        $"Roue [Marque: {marqueRoue}, Tourne: {tourne}, Taille de peau: {tailleEnPouces}\"]";
+        $"Roue [Marque: {marqueRoue}, Tourne: {tourne}, Taille de pneu: {tailleEnPouces}\"]";
     }
 
 }

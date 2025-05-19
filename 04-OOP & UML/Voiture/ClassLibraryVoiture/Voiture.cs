@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryVoiture;
+using System;
 namespace ClassLibraryVoiture
 {
     // Voiture Car Class
@@ -11,94 +12,89 @@ namespace ClassLibraryVoiture
         private Roue maRoueAvantDroite; // Front right Wheel
         private Roue maRoueArriereGauche; // Rear left Wheel
         private Roue maRoueArriereDroite;  // Rear Right Wheel
-        private Roue maRoueDeSecour; // Spare wheel (optional)
+        private Roue? maRoueDeSecours; // Spare wheel (optional)
 
         // Default constructor delegates to parameterized constructor : Creates a Toyota Corolla with Diesel engine and Michelin wheels
-        public Voiture() : this("Toyota", "Corolla", "Diesel", false, "Michelin", false, 16.5) { }
+        public Voiture() : this("Toyota", "Corolla", "Diesel",  "Michelin",  16.5) { }
 
         // Parameterized constructor: Creates a car with all specified properties
-        public Voiture(string marque, string modele, string type, bool estDemarre, string marqueRoue, bool tourne, double tailleEnPouces)
+        public Voiture(string marque, string modele, string typeMoteur, string marqueRoue, double tailleEnPouces)
+        :this(marque,
+             modele, 
+             new Moteur(typeMoteur, false), 
+             new Roue(tailleEnPouces, false, marqueRoue), 
+             new Roue(tailleEnPouces, false, marqueRoue), 
+             new Roue(tailleEnPouces, false, marqueRoue), 
+             new Roue(tailleEnPouces, false, marqueRoue),
+             null)
+        {}
+
+        // Full constructor
+        private Voiture(string marque, string modele, Moteur moteur, Roue maRoueAvantGauche, Roue maRoueAvantDroite,Roue maRoueArriereGauche,Roue maRoueArriereDroite,Roue? roueDeSecours)
         {
             this.marque = marque;
             this.modele = modele;
-            this.sonMoteur = new Moteur(type, estDemarre);
-            this.maRoueAvantGauche = new Roue(tailleEnPouces, tourne, marqueRoue);
-            this.maRoueAvantDroite = new Roue(tailleEnPouces, tourne, marqueRoue);
-            this.maRoueArriereGauche = new Roue(tailleEnPouces, tourne, marqueRoue);
-            this.maRoueArriereDroite = new Roue(tailleEnPouces, tourne, marqueRoue);
-            this.maRoueDeSecour = null;
+            this.sonMoteur = moteur;
+            this.maRoueAvantGauche = maRoueAvantGauche;
+            this.maRoueAvantDroite = maRoueAvantDroite;
+            this.maRoueArriereGauche = maRoueArriereGauche;
+            this.maRoueArriereDroite = maRoueArriereDroite;
+            this.maRoueDeSecours = roueDeSecours;
         }
+
 
         // Copy constructor delegates to parameterized constructor : Creates a copy of another car (creates a new car by coping an existing one)
         public Voiture(Voiture voitureACopier)
-            // First call the parameterized constructor with values from the car we're copying
             : this(
-                voitureACopier.marque,
-                voitureACopier.modele,
-                voitureACopier.sonMoteur.ToString(), // Get engine type as string
-                voitureACopier.sonMoteur != null && voitureACopier.sonMoteur.DemarrerMoteur(),  // Check if engine exists and get its running status
-                voitureACopier.maRoueAvantGauche != null ? voitureACopier.maRoueAvantGauche.ToString() : "Michelin", // // Get front left wheel brand (or "Michelin" if wheel is null)
-                voitureACopier.maRoueAvantGauche?.Tourne ?? false, // Get front left wheel spin status (default to false if wheel is null)
-                voitureACopier.maRoueAvantGauche != null ? 585 : 585 // Get wheel size (default to 585mm if wheel is null)
+                voitureACopier.marque,  // Copy brand like "Toyota"
+                voitureACopier.modele,  // Copy model like "Corolla"
+                new Moteur(voitureACopier.sonMoteur),
+                new Roue(voitureACopier.maRoueAvantGauche),
+                new Roue(voitureACopier.maRoueAvantDroite),
+                new Roue(voitureACopier.maRoueArriereGauche),
+                new Roue(voitureACopier.maRoueArriereDroite),
+                voitureACopier.maRoueDeSecours is Roue roue ? new Roue(roue) : null
             )
-        {
-            // Now make DEEP COPIES of all components (so changes to the copy don't affect original)
+        {}
 
-            // Copy the engine (creates a brand new Moteur object)
-            this.sonMoteur = new Moteur(voitureACopier.sonMoteur);
-
-            // Copy all four wheels (create new Roue objects for each)
-            this.maRoueAvantGauche = new Roue(voitureACopier.maRoueAvantGauche);
-            this.maRoueAvantDroite = new Roue(voitureACopier.maRoueAvantDroite);
-            this.maRoueArriereGauche = new Roue(voitureACopier.maRoueArriereGauche);
-            this.maRoueArriereDroite = new Roue(voitureACopier.maRoueArriereDroite);
-
-            // Copy spare wheel if it exists (otherwise set to null)
-            this.maRoueDeSecour = voitureACopier.maRoueDeSecour != null
-                ? new Roue(voitureACopier.maRoueDeSecour)
-                : null;
-        }
 
         // Demarrer(): Starts the car's engine
-        public void Demarrer() => sonMoteur.DemarrerMoteur();
+        public bool Demarrer() => sonMoteur.DemarrerMoteur();
 
         // Arreter(): Stops the engine and all wheels
-        public void Arreter()
+        public bool Arreter()
         {
-            sonMoteur.ArreterMoteur();
-            maRoueAvantGauche.ArreterTourner();
-            maRoueAvantDroite.ArreterTourner();
-            maRoueArriereGauche.ArreterTourner();
-            maRoueArriereDroite.ArreterTourner();
+            bool moteurArrete = sonMoteur.ArreterMoteur();
+            bool r1 = maRoueAvantGauche.ArreterTourner();
+            bool r2 = maRoueAvantDroite.ArreterTourner();
+            bool r3 = maRoueArriereGauche.ArreterTourner();
+            bool r4 = maRoueArriereDroite.ArreterTourner();
+
+            return moteurArrete || r1 || r2 || r3 || r4;
         }
 
         // Avancer() : Makes the car move forward(starts engine and spins wheels if conditions are met)
-        public void Avancer()
+        public bool Avancer()
         {
-            if (sonMoteur.Entrainer2RouesMotrices(maRoueAvantGauche, maRoueAvantDroite))
+            bool rouesAvantTourne = sonMoteur.Entrainer2RouesMotrices(maRoueAvantGauche, maRoueAvantDroite);
+            if (rouesAvantTourne)
             {
-                maRoueArriereGauche.Tourner();
-                maRoueArriereDroite.Tourner();
+                bool r1 = maRoueArriereGauche.Tourner();
+                bool r2 = maRoueArriereDroite.Tourner();
+                return true;
             }
+            return false;
         }
 
-        /// <summary>
-        /// This method adds a spare wheel (maRoueDeSecour) to the car,
-        /// but only if it doesn't already have one.
-        /// </summary>
-        /// <returns>
-        /// The new spare wheel (Roue object) if added successfully,
-        /// otherwise returns null if a spare wheel already exists.
-        /// </returns>
-        public Roue AjouterRoueDeSecours()
+        public bool AjouterRoueDeSecours(Roue roueDeSecoursAAjouter)
         {
-            // Check if the car already has a spare wheel
-            if (maRoueDeSecour == null)
+            
+            if (maRoueDeSecours == null)
             {
-                maRoueDeSecour = new Roue(); // If not, create a new spare wheel using the default constructor
-                return maRoueDeSecour; // Return the newly created spare wheel
+                maRoueDeSecours = roueDeSecoursAAjouter;
+                return true;
             }
-            return null; // If a spare wheel already exists, do not create a new one — return null
+            return false; 
         }
 
 
@@ -114,7 +110,9 @@ namespace ClassLibraryVoiture
                    $"Roue Arrière Droite: {maRoueArriereDroite}\n" +
 
                    // Spare Wheel Check
-                   $"Roue de Secours: {(maRoueDeSecour != null ? maRoueDeSecour.ToString() : "Aucune")}";
+                   $"Roue de Secours: {(maRoueDeSecours != null ? maRoueDeSecours.ToString() : "Aucune")}";
         }
     }
 }
+
+
