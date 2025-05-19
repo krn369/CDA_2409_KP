@@ -18,7 +18,8 @@ namespace ClassLibraryVoiture
         }
 
         // Copy constructor calls parameterized constructor : Creates a copy of another engine
-        public Moteur(Moteur moteurACopier) : this(moteurACopier.type, moteurACopier.estDemarre) { }
+        public Moteur(Moteur moteurACopier) 
+            : this(moteurACopier.type, moteurACopier.estDemarre) { }
 
         // DemarrerMoteur(): Starts the engine if it's not already running
         public bool DemarrerMoteur()
@@ -45,11 +46,18 @@ namespace ClassLibraryVoiture
         // Entrainer2RouesMotrices(): Makes two wheels spin if the engine is running and the wheels aren't already spinning
         public bool Entrainer2RouesMotrices(Roue r1, Roue r2)
         {
+            // Check if the car is started and neither wheel is spinning
             if (estDemarre && !r1.Tourne && !r2.Tourne)
             {
-                r1.Tourner();
-                r2.Tourner();
-                return true;
+                // Attempt to start both wheels and verify that both succeeded
+                bool demarreR1 = r1.Tourner();
+                bool demarreR2 = r2.Tourner();
+
+                // Only return true if both wheels started successfully
+                if (demarreR1 && demarreR2)
+                {
+                    return true;
+                }
             }
             return false;
         }
