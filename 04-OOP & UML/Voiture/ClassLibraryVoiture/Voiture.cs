@@ -70,7 +70,7 @@ namespace ClassLibraryVoiture
             bool r3 = maRoueArriereGauche.ArreterTourner();
             bool r4 = maRoueArriereDroite.ArreterTourner();
 
-            return moteurArrete || r1 || r2 || r3 || r4;
+            return moteurArrete && r1 && r2 && r3 && r4;
         }
 
         // Avancer() : Makes the car move forward(starts engine and spins wheels if conditions are met)
@@ -81,7 +81,7 @@ namespace ClassLibraryVoiture
             {
                 bool r1 = maRoueArriereGauche.Tourner();
                 bool r2 = maRoueArriereDroite.Tourner();
-                return true;
+                return r1&&r2;
             }
             return false;
         }
