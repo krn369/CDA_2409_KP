@@ -1,69 +1,44 @@
-﻿# 🏦 Bank Account (CompteBancaire) Class in C#
+﻿# Bank Account (`Compte`) Class - Overview 🏦  
 
-## 🎯 Objective
-Create a `CompteBancaire` class that handles:  
-💰 Basic banking operations  
-🛡️ With overdraft protection  
+## 🚀 **Objective**  
+Create a simple **Bank Account** class (`Compte`) in C# to simulate basic banking operations while learning **object-oriented programming (OOP)** concepts.  
 
-### Core Requirements
-- 🔢 Store account details (number, owner, balance, overdraft)
-- ⬆️⬇️ Support deposits/withdrawals
-- 🔄 Transfers between accounts
-- 📊 Balance comparisons
+### **Key Operations**  
+- Depositing funds  
+- Withdrawing money  
+- Transferring between accounts  
+- Comparing account balances  
 
-## 🛠️ Implementation
+---
 
-### 1️⃣ Class Structure
-```csharp
-public class Compte
-{
-    private int numero;          // 🔐 Account ID
-    private string nom;         // 👤 Owner
-    private int solde;           // 💰 Balance
-    private int decouvertAutorise; // ➖ Overdraft
+## 🔑 **Key Features**  
 
-    Constructors : 💡 Pro Tip: Chain constructors using this() to avoid duplicate code!
-    
-    public Compte() : this(0, "", 0, 0) { }  // 🏗️ Default
-    
-    public Compte(int num, string name, int balance, int overdraft) 
-    {
-        // ✅ Initialization
-    }
-}
+### 📝 **Account Information**  
+- Account number  
+- Holder’s name  
+- Current balance  
+- Overdraft limit  
 
+### 💰 **Bank Operations**  
+| Method            | Description |  
+|-------------------|-------------|  
+| `Crediter()`      | Deposit money into the account. |  
+| `Debiter()`       | Withdraw money (checks overdraft limit). |  
+| `Transferer()`    | Transfer funds between accounts. |  
 
-## 🔑 Key Methods
+### ⚖️ **Balance Comparison**  
+- Implements `IComparable` to compare balances between accounts.  
 
-| Method | Description | Emoji | Returns |
-|--------|-------------|-------|---------|
-| `ToString()` | Returns formatted account info | 📝 | `string` |
-| `Crediter(int montant)` | Deposits amount to balance | 💹 | `void` |
-| `Debiter(int montant)` | Withdraws amount (with overdraft check) | 💸 | `bool` (success/fail) |
-| `Transferer(int montant, Compte dest)` | Transfers to another account | 🔄 | `bool` (success/fail) |
-| `Superieur(Compte autre)` | Compares balances | ⚖️ | `bool` (true if current > other) |
+---
 
-### 💡 Method Details:
-```csharp
-// 📝 Display account info
-public override string ToString() 
-{
-    return $"Account [No:{numero}, Name:{nom}, Balance:{solde}€, Overdraft:{decouvertAutorise}€]";
-}
+## ⚠️ **Error Handling**  
+- Validates transaction amounts (must be positive).  
+- Prevents overdrafts beyond the limit.  
+- Checks for sufficient funds before withdrawals/transfers.  
 
-// 💹 Deposit money (with validation)
-public void Crediter(int montant)
-{
-    if (montant <= 0) throw new ArgumentException("Amount must be positive!");
-    solde += montant;
-}
+---
 
-// 💸 Withdraw with overdraft protection
-public bool Debiter(int montant)
-{
-    if (montant <= 0 || (solde - montant) < decouvertAutorise) 
-        return false;
-    solde -= montant;
-    return true;
-}
-
+## 🎯 **Learning Goals**  
+✔ Understand **C# classes** and **methods**.  
+✔ Learn **interfaces** (`IComparable`) and **error handling**.  
+✔ Implement real-world banking logic in code.  

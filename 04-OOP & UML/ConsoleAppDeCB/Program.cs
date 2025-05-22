@@ -1,35 +1,108 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
+using System.Globalization;
 using ClassLibraryDeCB;
 
-class Program
+namespace ConsoleAppDeCB
 {
-    static void Main(string[] args)
+    class Program
     {
-        Compte c1 = new Compte();
-        Compte c2 = new Compte(12345, "Toto", 1000, -500);
-        Compte c3 = new Compte(67890, "Titi", 2000, -1000);
+        static void Main(string[] args)
+        {
+            // Set the console to support UTF-8 encoding for special characters like €
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        Console.WriteLine("----- Initial State || État initial -----");
-        Console.WriteLine(c1.ToString());
-        Console.WriteLine(c2.ToString());
-        Console.WriteLine(c3.ToString());
+            Console.WriteLine("Système de Gestion de Comptes Bancaires");
+            Console.WriteLine("====================================================================================================\n");
 
-        Console.WriteLine("\n----- After Deposit  || Après le dépôt  -----");
-        c2.Crediter(100);
-        Console.WriteLine(c2.ToString());
+            try
+            {
+                // Create two sample accounts
+                Compte compte1 = new Compte(1001, "Alice Dupont", 1500.00m, -500.00m);
+                Compte compte2 = new Compte(1002, "Bernard Martin", 2500.00m, -1000.00m);
 
-        Console.WriteLine("\n----- After Withdraw Attempt ||  Après une tentative de retrait -----");
-        bool ok = c2.Debiter(1600);
-        Console.WriteLine(ok ? "Débit réussi !" : "Débit échoué !");
+                // Display initial account information
+                Console.WriteLine("Détails initiaux des comptes:");
+                Console.WriteLine(compte1);
+                Console.WriteLine(compte2);
+                Console.WriteLine();
 
-        Console.WriteLine("\n----- After Transfer  ||  Après le transfert  -----");
-        c2.Transferer(300, c3);
-        Console.WriteLine(c2.ToString());
-        Console.WriteLine(c3.ToString());
+                // Demonstrate deposit functionality
+                Console.WriteLine("Dépôt de 200 € sur le compte d'Alice...");
+                try
+                {
+                    compte1.Crediter(200.00m); // Credit 200 to Alice's account
+                    Console.WriteLine($"Nouveau solde d'Alice: {compte1.Solde.ToString("C", new CultureInfo("fr-FR"))}");
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine($"Erreur de dépôt: {ex.Message}");
+                }
 
-        Console.WriteLine("\n----- Balance Comparison  ||  Comparaison du solde  -----  ");
-        Console.WriteLine(c2.Superieur(c3) ? "Supérieur !" : "Inférieur !");
+                // Demonstrate withdrawal functionality
+                Console.WriteLine("\nRetrait de 100 € du compte de Bernard...");
+                try
+                {
+                    if (compte2.Debiter(100.00m))  // Debit 100 from Bernard's account
+                    {
+                        Console.WriteLine($"Retrait réussi. Nouveau solde de Bernard: {compte2.Solde.ToString("C", new CultureInfo("fr-FR"))}");
+                    }
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Console.WriteLine($"Erreur de retrait: {ex.Message}");
+                }
 
+                // Demonstrate transfer functionality
+                Console.WriteLine("\nTransfert de 300 € de Bernard vers Alice...");
+                try
+                {
+                    if (compte2.Transferer(300.00m, compte1))  // Transfer 300 from Bernard to Alice
+                    {
+                        Console.WriteLine("Transfert réussi.");
+                        Console.WriteLine($"Solde d'Alice: {compte1.Solde.ToString("C", new CultureInfo("fr-FR"))}");
+                        Console.WriteLine($"Solde de Bernard: {compte2.Solde.ToString("C", new CultureInfo("fr-FR"))}");
+                    }
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Console.WriteLine($"Erreur de transfert: {ex.Message}");
+                }
+
+                // Demonstrate comparison functionality
+                Console.WriteLine("\nComparaison des comptes:");
+                if (compte1.Superieur(compte2))
+                {
+                    Console.WriteLine("Alice a plus d'argent que Bernard");
+                }
+                else
+                {
+                    Console.WriteLine("Bernard a plus d'argent qu'Alice");
+                }
+
+                // Try an invalid operation (withdrawal exceeding overdraft limit)
+                try
+                {
+                    Console.WriteLine("\nTentative de retrait de 3000 € du compte d'Alice...");
+                    compte1.Debiter(3000.00m);  // Attempting an invalid withdrawal
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Console.WriteLine($"Erreur: {ex.Message}");
+                }
+
+                // Display final account information
+                Console.WriteLine("\nDétails finaux des comptes:");
+                Console.WriteLine(compte1);
+                Console.WriteLine(compte2);
+            }
+            catch (Exception ex)
+            {
+                // Catch any unexpected errors and display the message
+                Console.WriteLine($"Une erreur inattendue est survenue: {ex.Message}");
+            }
+
+            Console.WriteLine("\nAppuyez sur une touche pour quitter...");
+            Console.ReadKey();
+        }
     }
 }
