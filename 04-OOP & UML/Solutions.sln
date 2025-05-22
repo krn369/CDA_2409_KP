@@ -22,15 +22,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lepidoptere", "Lepidoptere", "{B6899C07-CD7B-4C5A-A1A7-405394CE739A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Voiture", "Voiture", "{BA223E66-F34A-48E9-9E4A-A487E41A6E19}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryVoiture", "Voiture\ClassLibraryVoiture\ClassLibraryVoiture.csproj", "{D486D0AA-7BEC-4450-9F99-379601DB11F2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppVoiture", "Voiture\ConsoleAppVoiture\ConsoleAppVoiture.csproj", "{4C1CB3F6-64EF-4BC7-A9FE-17E4F6D61700}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compte_Bancaire", "Compte_Bancaire", "{A564DE2C-E797-4AD6-923A-7D59E1FF8324}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDeCB", "ClassLibrary\ClassLibraryDeCB.csproj", "{A9890B5F-20B8-41A2-A629-3D181EA81401}"
 EndProject
