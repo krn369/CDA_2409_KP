@@ -11,12 +11,13 @@ namespace ConsoleAppDeCB
             // Set the console to support UTF-8 encoding for special characters like €
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+            // Display header for the application
             Console.WriteLine("Système de Gestion de Comptes Bancaires");
             Console.WriteLine("====================================================================================================\n");
 
             try
             {
-                // Create two sample accounts
+                // Create two sample bank accounts
                 Compte compte1 = new Compte(1001, "Alice Dupont", 1500.00m, -500.00m);
                 Compte compte2 = new Compte(1002, "Bernard Martin", 2500.00m, -1000.00m);
 
