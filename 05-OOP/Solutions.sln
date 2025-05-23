@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliothequeDeClassBouteille", "Bouteille\BibliothequeDeClassBouteille\BibliothequeDeClassBouteille.csproj", "{FAA26A44-3310-49F5-B220-76106A2835D9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solution_Bouteille", "Bouteille\Solution_Bouteille\Solution_Bouteille.csproj", "{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryUTB", "Une transaction boursière\ClassLibraryUTB\ClassLibraryUTB.csproj", "{15AF633A-62A2-4756-8295-E38EA283D89A}"
@@ -27,14 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryVoiture", "Voit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppVoiture", "Voiture\ConsoleAppVoiture\ConsoleAppVoiture.csproj", "{4C1CB3F6-64EF-4BC7-A9FE-17E4F6D61700}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compte_Bancaire", "Compte_Bancaire", "{A564DE2C-E797-4AD6-923A-7D59E1FF8324}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliothequeDeClassBouteille", "1-Bouteille\BibliothequeDeClassBouteille\BibliothequeDeClassBouteille.csproj", "{B4EFFE54-22ED-490C-A973-913C05475302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDeCB", "ClassLibrary\ClassLibraryDeCB.csproj", "{A9890B5F-20B8-41A2-A629-3D181EA81401}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryDeCB", "5-Compte Bancaire\ClassLibraryDeCB\ClassLibraryDeCB.csproj", "{AE21DABD-97D3-4C09-8F56-2C782BE9FAF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDeCB", "ConsoleAppDeCB\ConsoleAppDeCB.csproj", "{1A5E9EDB-EA80-48D9-8F49-18A44808648E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppDeCB", "5-Compte Bancaire\ConsoleAppDeCB\ConsoleAppDeCB.csproj", "{341BBBE8-798B-446E-8742-E2ADB69B6FB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compte_Bancaire", "Compte_Bancaire", "{CDD5B6C4-E85D-4EFC-92EB-C9F563EFC8F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +39,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FAA26A44-3310-49F5-B220-76106A2835D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAA26A44-3310-49F5-B220-76106A2835D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAA26A44-3310-49F5-B220-76106A2835D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAA26A44-3310-49F5-B220-76106A2835D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -74,20 +67,23 @@ Global
 		{4C1CB3F6-64EF-4BC7-A9FE-17E4F6D61700}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C1CB3F6-64EF-4BC7-A9FE-17E4F6D61700}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C1CB3F6-64EF-4BC7-A9FE-17E4F6D61700}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9890B5F-20B8-41A2-A629-3D181EA81401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9890B5F-20B8-41A2-A629-3D181EA81401}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9890B5F-20B8-41A2-A629-3D181EA81401}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9890B5F-20B8-41A2-A629-3D181EA81401}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A5E9EDB-EA80-48D9-8F49-18A44808648E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A5E9EDB-EA80-48D9-8F49-18A44808648E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A5E9EDB-EA80-48D9-8F49-18A44808648E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A5E9EDB-EA80-48D9-8F49-18A44808648E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4EFFE54-22ED-490C-A973-913C05475302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EFFE54-22ED-490C-A973-913C05475302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EFFE54-22ED-490C-A973-913C05475302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EFFE54-22ED-490C-A973-913C05475302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE21DABD-97D3-4C09-8F56-2C782BE9FAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE21DABD-97D3-4C09-8F56-2C782BE9FAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE21DABD-97D3-4C09-8F56-2C782BE9FAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE21DABD-97D3-4C09-8F56-2C782BE9FAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341BBBE8-798B-446E-8742-E2ADB69B6FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341BBBE8-798B-446E-8742-E2ADB69B6FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341BBBE8-798B-446E-8742-E2ADB69B6FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341BBBE8-798B-446E-8742-E2ADB69B6FB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FAA26A44-3310-49F5-B220-76106A2835D9} = {FC88A992-E34A-4F6E-A8C6-B63E2F28C57B}
 		{5BCD01A0-1A04-4FCA-AAF1-18E92B13D907} = {FC88A992-E34A-4F6E-A8C6-B63E2F28C57B}
 		{15AF633A-62A2-4756-8295-E38EA283D89A} = {CC0F04A0-50D0-4C6C-82EC-F1B824472F79}
 		{BD4CCD31-8A67-4C0F-9620-6A1FE31E6CDE} = {CC0F04A0-50D0-4C6C-82EC-F1B824472F79}
@@ -95,8 +91,9 @@ Global
 		{14B01B75-A8FB-4703-907E-A5E605CB59BF} = {B6899C07-CD7B-4C5A-A1A7-405394CE739A}
 		{D486D0AA-7BEC-4450-9F99-379601DB11F2} = {BA223E66-F34A-48E9-9E4A-A487E41A6E19}
 		{4C1CB3F6-64EF-4BC7-A9FE-17E4F6D61700} = {BA223E66-F34A-48E9-9E4A-A487E41A6E19}
-		{A9890B5F-20B8-41A2-A629-3D181EA81401} = {A564DE2C-E797-4AD6-923A-7D59E1FF8324}
-		{1A5E9EDB-EA80-48D9-8F49-18A44808648E} = {A564DE2C-E797-4AD6-923A-7D59E1FF8324}
+		{B4EFFE54-22ED-490C-A973-913C05475302} = {FC88A992-E34A-4F6E-A8C6-B63E2F28C57B}
+		{AE21DABD-97D3-4C09-8F56-2C782BE9FAF3} = {CDD5B6C4-E85D-4EFC-92EB-C9F563EFC8F8}
+		{341BBBE8-798B-446E-8742-E2ADB69B6FB9} = {CDD5B6C4-E85D-4EFC-92EB-C9F563EFC8F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {216AAD21-DFDE-4513-ADC1-16B483052CC6}
