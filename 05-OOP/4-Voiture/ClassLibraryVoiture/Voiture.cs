@@ -32,13 +32,13 @@ namespace ClassLibraryVoiture
         // Full constructor
         private Voiture(string marque, string modele, Moteur moteur, Roue maRoueAvantGauche, Roue maRoueAvantDroite,Roue maRoueArriereGauche,Roue maRoueArriereDroite,Roue? roueDeSecours)
         {
-            this.marque = marque;
-            this.modele = modele;
-            this.sonMoteur = moteur;
-            this.maRoueAvantGauche = maRoueAvantGauche;
-            this.maRoueAvantDroite = maRoueAvantDroite;
-            this.maRoueArriereGauche = maRoueArriereGauche;
-            this.maRoueArriereDroite = maRoueArriereDroite;
+            this.marque = marque ?? throw new ArgumentNullException(nameof(marque));
+            this.modele = modele ?? throw new ArgumentNullException(nameof(modele));
+            this.sonMoteur = moteur ?? throw new ArgumentNullException(nameof(moteur));
+            this.maRoueAvantGauche = maRoueAvantGauche ?? throw new ArgumentNullException(nameof(maRoueAvantGauche));
+            this.maRoueAvantDroite = maRoueAvantDroite ?? throw new ArgumentNullException(nameof(maRoueAvantDroite));
+            this.maRoueArriereGauche = maRoueArriereGauche ?? throw new ArgumentNullException(nameof(maRoueArriereGauche));
+            this.maRoueArriereDroite = maRoueArriereDroite ?? throw new ArgumentNullException(nameof(maRoueArriereDroite));
             this.maRoueDeSecours = roueDeSecours;
         }
 
@@ -46,8 +46,8 @@ namespace ClassLibraryVoiture
         // Copy constructor delegates to parameterized constructor : Creates a copy of another car (creates a new car by coping an existing one)
         public Voiture(Voiture voitureACopier)
             : this(
-                voitureACopier.marque,  // Copy brand like "Toyota"
-                voitureACopier.modele,  // Copy model like "Corolla"
+                voitureACopier.marque,  
+                voitureACopier.modele,  
                 new Moteur(voitureACopier.sonMoteur),
                 new Roue(voitureACopier.maRoueAvantGauche),
                 new Roue(voitureACopier.maRoueAvantDroite),
@@ -73,7 +73,7 @@ namespace ClassLibraryVoiture
             return moteurArrete && r1 && r2 && r3 && r4;
         }
 
-        // Avancer() : Makes the car move forward(starts engine and spins wheels if conditions are met)
+        // Avancer() : Makes the car move forward(starts engine and spins wheels if conditions are met
         public bool Avancer()
         {
             bool rouesAvantTourne = sonMoteur.Entrainer2RouesMotrices(maRoueAvantGauche, maRoueAvantDroite);
@@ -86,15 +86,19 @@ namespace ClassLibraryVoiture
             return false;
         }
 
+
+        // AjouterRoueDeSecours(): Adds a spare wheel if none exists yet
         public bool AjouterRoueDeSecours(Roue roueDeSecoursAAjouter)
         {
-            
+            if (roueDeSecoursAAjouter == null)
+                throw new ArgumentNullException(nameof(roueDeSecoursAAjouter));
+
             if (maRoueDeSecours == null)
             {
                 maRoueDeSecours = roueDeSecoursAAjouter;
                 return true;
             }
-            return false; 
+            return false;
         }
 
 
@@ -103,7 +107,7 @@ namespace ClassLibraryVoiture
             return $"Voiture [Marque: {marque}, Modele: {modele}]\n" +  // Car Basic Info
                    $"{sonMoteur}\n" +                                   // Engine Info
 
-                   // Wheel Info(Front / Rear Left / Right)
+                   // Wheel Info(Front & Rear Left / Right)
                    $"Roue Avant Gauche: {maRoueAvantGauche}\n" +
                    $"Roue Avant Droite: {maRoueAvantDroite}\n" +
                    $"Roue Arrière Gauche: {maRoueArriereGauche}\n" +

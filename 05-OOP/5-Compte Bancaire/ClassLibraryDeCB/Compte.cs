@@ -5,7 +5,7 @@ namespace ClassLibraryDeCB
 {
     // The 'Compte' class represents a bank account.
     // It implements IComparable to allow comparing two accounts based on their balance.
-    public class Compte : IComparable
+    public class Compte : IComparable<Compte>
     {
         // Private fields (attributes)  to store account details
         private int numero;                                        // Account number (e.g., 12345)
@@ -71,10 +71,10 @@ namespace ClassLibraryDeCB
 
             // Check if the withdrawal will exceed the overdraft limit
             if (solde - montant < decouvertAutorise)
-                throw new InvalidOperationException("Opération refusée : découvert insuffisant");
+                return false; // Withdrawal refused
 
             solde -= montant;  // Decrease the account balance by the withdrawal amount
-            return true;       // Return true if withdrawal was successful
+            return true;       // Withdrawal successful
         }
 
 
@@ -87,27 +87,17 @@ namespace ClassLibraryDeCB
             if (montant <= 0) 
                 throw new ArgumentException("Le montant doit être positif", nameof(montant));
 
-            // Ensure the transfer amount is positive
+            
             if (compteDestinataire == null)  
                 throw new ArgumentNullException(nameof(compteDestinataire));
 
-            try
-            {
-                // Attempt to withdraw money from the current account and credit it to the destination account
-                if (Debiter(montant)) // Try to withdraw  from the current account
-                {
-                    compteDestinataire.Crediter(montant); // If the withdrawal is successful, it credits the amount to the recipient account
-                    return true;  // Return true if the transfer was successful
-                }
-                return false;  // Return false if withdrawal failed
-            }
+            // Try to withdraw money from this account
+            if (!Debiter(montant))
+                return false; // Withdrawal failed (insufficient funds)
 
-
-            // If any error occurs(e.g., insufficient funds), it catches the exception and rethrows it with a specific message.
-            catch (InvalidOperationException ex) 
-            {
-                throw new InvalidOperationException("Transfert échoué : solde insuffisant !", ex);
-            }
+            // Deposit money into destination account
+            compteDestinataire.Crediter(montant);
+            return true;
         }
 
 
@@ -124,21 +114,16 @@ namespace ClassLibraryDeCB
 
 
 
-        // CompareTo() -  This method is part of the IComparable interface and is used to compare two accounts for sorting purposes.
+        // Implementation of IComparable<Compte>
+        //If you compare to nothing (null), your account is considered bigger.
+        //Otherwise, it compares the balances and tells you which account has more money, less money, or if they are equal. 1, -1, 0
 
-        public int CompareTo(object? obj)
+        public int CompareTo(Compte? other)
         {
-            if (obj == null) return 1;  // If the object is null, this account is considered greater
+            if (other == null)
+                return 1; // This instance is greater than null
 
-
-            // Ensure the object is of type 'Compte' (bank account) for comparison
-            if (obj is Compte other)  
-                return solde.CompareTo(other.solde);  // Compare the balances and returns a number: 
-            // A negative value if the current account balance is less than the other account.
-            // A positive value if the current account balance is greater than the other account.
-            // Zero if both accounts have the same balance.
-
-            throw new ArgumentException("L'objet n'est pas un Compte");  // If the object is not a 'Compte', throw an exception
+            return solde.CompareTo(other.solde);
         }
     }
 }

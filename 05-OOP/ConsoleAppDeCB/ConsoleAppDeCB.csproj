@@ -7,9 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryDeCB\ClassLibraryDeCB.csproj" />
-    <ProjectReference Include="..\ClassLibrary\ClassLibraryDeCB.csproj" />
-  </ItemGroup>
-
 </Project>

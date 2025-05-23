@@ -1,23 +1,24 @@
 ﻿using ClassLibraryVoiture;
 using System;
+using System.Diagnostics.Metrics;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // ==== Test 1: Default Constructor ====
+        // ==== Test 1: Default Voiture Constructor ====
         Console.WriteLine("===== Test 1: Default Voiture =====");
         Voiture defaultCar = new Voiture();
         Console.WriteLine(defaultCar);
         Console.WriteLine();
 
-        // ==== Test 2: Parameterized Constructor ====
+        // ==== Test 2: Parameterized Voiture Constructor ====
         Console.WriteLine("===== Test 2: Parameterized Voiture =====");
-        Voiture customCar = new Voiture("BMW", "Serie 3", "Essence", true, "Pirelli", false, 16.4);
+        Voiture customCar = new Voiture("BMW", "Serie 3", "Essence", "Pirelli", 16.4);
         Console.WriteLine(customCar);
         Console.WriteLine();
 
-        // ==== Test 3: Copy Constructor ====
+        // ==== Test 3: Voiture Copy Constructor ====
         Console.WriteLine("===== Test 3: Copied Voiture =====");
         Voiture copiedCar = new Voiture(customCar);
         Console.WriteLine(copiedCar);
@@ -43,31 +44,36 @@ class Program
         Console.WriteLine(copiedWheel);
         Console.WriteLine();
 
-        // ==== Test 6: Car Actions ====
-        Console.WriteLine("===== Test 6: Start, Move, Stop =====");
-        customCar.Demarrer();       // Start engine
-        customCar.Avancer();        // Move car
-        Console.WriteLine(customCar);
-        customCar.Arreter();        // Stop car
-        Console.WriteLine(customCar);
+        // ==== Test 6: Start, Move, Stop the Car ====
+        Console.WriteLine("===== Test 6: Start, Move, Stop the Car =====");
+        customCar.Demarrer();  // Start engine
+        customCar.Avancer();   // Move car
+        Console.WriteLine(customCar); // Displays the state of the car after the engine is started and it has moved(i.e., wheels should now be spinning, engine running).
+
+        customCar.Arreter();   // Stop car
+        Console.WriteLine("--------------------------------------------------------------------------------------------------------");
+        Console.WriteLine(customCar); // Displays the state of the car after calling Arreter(), which stops the engine and all wheels.
         Console.WriteLine();
 
-        // ==== Test 7: Spare Wheel (maRoueDeSecour) ====
+        // ==== Test 7: Adding Spare Wheel ====
         Console.WriteLine("===== Test 7: Adding Spare Wheel =====");
-        Roue spare = customCar.AjouterRoueDeSecours();
+        Roue spareWheel = new Roue(17.0, false, "Michelin");
+        bool isSpareAdded = customCar.AjouterRoueDeSecours(spareWheel);
 
-        if (spare != null)
+        if (isSpareAdded)
         {
-            Console.WriteLine("Spare wheel added:");
-            Console.WriteLine(spare);
+            Console.WriteLine("Spare wheel successfully added:");
+            Console.WriteLine(spareWheel);
         }
         else
         {
             Console.WriteLine("Spare wheel already exists.");
         }
 
-        // Try adding it again to test duplication prevention
-        Roue spare2 = customCar.AjouterRoueDeSecours();
-        Console.WriteLine(spare2 == null ? "Second spare NOT added (already exists)." : "Unexpected second spare added.");
+        // Try adding a second spare wheel to ensure duplication prevention
+        Roue secondSpareWheel = new Roue(16.5, false, "Michelin");
+        bool isSecondSpareAdded = customCar.AjouterRoueDeSecours(secondSpareWheel);
+
+        Console.WriteLine(isSecondSpareAdded ? "Unexpected second spare added." : "Second spare NOT added (already exists).");
     }
 }
