@@ -1,4 +1,5 @@
-﻿namespace ClassLibraryVoiture
+﻿using System;
+namespace ClassLibraryVoiture
 {
     // Roue  Wheel Class
     public class Roue
@@ -8,7 +9,7 @@
         private double tailleEnPouces;     // Wheel size with tyre (diameter) in inches
         public bool Tourne => tourne; // Read-only access
 
-        // Default constructor delegates to parameterized one : Creates a 215mm Michelin Wheel that's not spinning
+        // Default constructor delegates to parameterized one : Creates a 18.5" Michelin Wheel that's not spinning
         public Roue() : this(18.5, false, "Michelin") { }
 
 
@@ -16,11 +17,11 @@
         public Roue(double tailleEnPouces, bool tourne, string marqueRoue)
         {
             if (tailleEnPouces < 0)
-                throw new ArgumentException("La taille de la roue doit être positive.");
+                throw new ArgumentException("La taille de la roue doit être positive.", nameof(tailleEnPouces));
 
             this.tailleEnPouces = tailleEnPouces;
             this.tourne = tourne;
-            this.marqueRoue = marqueRoue;
+            this.marqueRoue = marqueRoue ?? throw new ArgumentNullException(nameof(marqueRoue));
         }
 
 
