@@ -3,29 +3,33 @@
     public class Fraction
     {
         // Fields
-        private int numerateur;
-        private int denominateur;
+        private int numerateur;  // Top part of the fraction
+        private int denominateur;  // Bottom part of the fraction
 
-
+        //  =========================================================================================================================================
 
         // Constructors - All constructors ultimately call the main constructor
 
-        public Fraction() : this(0, 1) { } // Default uses main constructor
+        public Fraction() : this(0, 1) { } // Default uses main constructor :  0/1
 
-        public Fraction(int numerateur) : this(numerateur, 1) { } // Single param uses main constructor
+        public Fraction(int numerateur) : this(numerateur, 1) { } // Single parameter uses main constructor : 3/1
 
-        public Fraction(int numeratuer, int denominateur)
+        public Fraction(int numerateur, int denominateur)
         {
-            // Main constructor handles all initialization
+            // Main constructor handles all initialization i.e  sets the num & deno for a fraction
             if (denominateur == 0)
                 throw new ArgumentException("Le dénominateur ne peut pas être zéro. ");
 
             this.numerateur = numerateur;
             this.denominateur = denominateur;
-            Reduire(); // All fractions get reduced on creation
+            Reduire(); // All fractions get reduced (simplified)  on creation
         }
 
+        // Copy Constructor : Creates a copy of another Fraction. 
         public Fraction(Fraction f) : this(f.numerateur, f.denominateur) { } // Copy constructor uses main constructor
+
+
+        //  =========================================================================================================================================
 
         // Methods
         
@@ -37,7 +41,9 @@
             // No need to reduce as sign change doesn't affect simplification
         }
 
-        public void Inverse()  // Swap numerator by denominator (d/n)
+
+
+        public void Inverse()  // Swap the numerator by denominator (d/n)
         {
             if (numerateur == 0)
                 throw new InvalidOperationException("Impossible d'inverser zéro");
@@ -46,10 +52,14 @@
             Reduire();  // Re-simplify after swap
         }
 
-        // Checks if this > other by cross-multiplying
+
+
+        // This method checks if this fraction is greater than another fraction f by cross-multiplying.
         public bool Superieur(Fraction f) => (numerateur * f.denominateur) > (f.numerateur * f.denominateur);
 
-        // Checks if this == other by cross-multiplying
+
+
+        // This method checks if two fractions are equal by cross-multiplying and comparing.
         public bool EgalA(Fraction f) => (numerateur * f.denominateur) == (f.numerateur * denominateur);
 
 
@@ -60,10 +70,13 @@
             numerateur * f.denominateur + f.numerateur *denominateur,
             denominateur * f.denominateur);
 
+
+        // Moins (Subtraction of two fractions) 
         public Fraction Moins(Fraction f) => new Fraction(
             numerateur * f.denominateur - f.numerateur * denominateur,
             denominateur * f.denominateur);
 
+        //  Multiplie (Multiplication of two fractions)
         public Fraction Multiplie(Fraction f) => new Fraction(
             numerateur * f.numerateur,
             denominateur * f.denominateur);
@@ -77,6 +90,8 @@
             return Multiplie(new Fraction(f.denominateur, f.numerateur));  // Reuses Multiplie with inverse
         }
 
+
+        // This method converts the fraction to a string for display.
         public override string ToString()
         {
             if (denominateur == 1) return numerateur.ToString();
@@ -85,7 +100,8 @@
         }
 
 
-        // Private Methods
+        // Private Methods 
+        // simplifying Fractions (Reducing)
         private void Reduire()
         {
             int pgcd = GetPgcd();
