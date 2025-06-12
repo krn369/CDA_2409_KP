@@ -16,7 +16,7 @@ namespace WindowsFormsAppCalculatrice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAdditionneur());
+            Application.Run(new Calculatrice());
         }
     }
 }
