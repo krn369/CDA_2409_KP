@@ -53,6 +53,7 @@
             this.btnCalculer.TabIndex = 26;
             this.btnCalculer.Text = "Calculer";
             this.btnCalculer.UseVisualStyleBackColor = true;
+            this.btnCalculer.TextChanged += new System.EventHandler(this.btnCalculer_Click);
             this.btnCalculer.Click += new System.EventHandler(this.btnCalculer_Click);
             // 
             // btnVider
@@ -65,6 +66,7 @@
             this.btnVider.TabIndex = 25;
             this.btnVider.Text = "Vider";
             this.btnVider.UseVisualStyleBackColor = true;
+            this.btnVider.TextChanged += new System.EventHandler(this.btnVider_Click);
             this.btnVider.Click += new System.EventHandler(this.btnVider_Click);
             // 
             // button5
@@ -74,9 +76,10 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(73, 49);
             this.button5.TabIndex = 24;
+            this.button5.Tag = "5";
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button6
             // 
@@ -85,9 +88,10 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(73, 49);
             this.button6.TabIndex = 23;
+            this.button6.Tag = "6";
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button7
             // 
@@ -96,9 +100,10 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(73, 49);
             this.button7.TabIndex = 22;
+            this.button7.Tag = "7";
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button8
             // 
@@ -107,9 +112,10 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(73, 49);
             this.button8.TabIndex = 21;
+            this.button8.Tag = "8";
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button9
             // 
@@ -118,9 +124,10 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(73, 49);
             this.button9.TabIndex = 20;
+            this.button9.Tag = "9";
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button4
             // 
@@ -129,9 +136,10 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(73, 49);
             this.button4.TabIndex = 19;
+            this.button4.Tag = "4";
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button3
             // 
@@ -140,9 +148,10 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(73, 49);
             this.button3.TabIndex = 18;
+            this.button3.Tag = "3";
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button2
             // 
@@ -151,9 +160,10 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 49);
             this.button2.TabIndex = 17;
+            this.button2.Tag = "2";
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button1
             // 
@@ -162,9 +172,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 49);
             this.button1.TabIndex = 16;
+            this.button1.Tag = "1";
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.TextChanged += new System.EventHandler(this.DigitButton_Click);
             // 
             // button0
             // 
@@ -173,9 +184,10 @@
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(73, 49);
             this.button0.TabIndex = 15;
+            this.button0.Tag = "0";
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
-            this.button0.Click += new System.EventHandler(this.button0_Click);
+            this.button0.TextChanged += new System.EventHandler(this.btnVider_Click);
             // 
             // textBox1
             // 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsAppCalculatrice
@@ -15,76 +8,70 @@ namespace WindowsFormsAppCalculatrice
         public Calculatrice()
         {
             InitializeComponent();
+            LierChiffres(); // Call our method to connect all digit buttons
         }
 
-        private void button0_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method connects all digit buttons (0–9) to a single event handler.
+        /// It uses the Tag property of each button to know which digit to add.
+        /// </summary>
+        private void LierChiffres()
         {
-            textBox1.Text += "0+";
+            // Go through all the controls on the form
+            foreach (Control c in this.Controls)
+            {
+                // Check if the control is a Button and has a Tag value
+                if (c is Button btn && btn.Tag != null)
+                {
+                    // When this button is clicked, run the DigitButton_Click method
+                    btn.Click += DigitButton_Click;
+                }
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method runs when a digit button is clicked.
+        /// It adds the digit (from the button's Tag) to the TextBox, followed by a '+' sign.
+        /// </summary>
+        private void DigitButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "1+";
+            // Get the button that was clicked
+            if (sender is Button btn && btn.Tag != null)
+            {
+                // Add the digit and "+" to the TextBox
+                textBox1.Text += btn.Tag.ToString() + "+";
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "2+";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "3+";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "4+";
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "5+";
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "6+";
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "7+";
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "8+";
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "9+";
-        }
-
+        /// <summary>
+        /// This method calculates the sum of the digits entered and shows the result.
+        /// </summary>
         private void btnCalculer_Click(object sender, EventArgs e)
         {
+            // Split the text by "+" into parts (e.g., "2+3+4+" becomes ["2", "3", "4", ""])
             string[] parts = textBox1.Text.Split('+');
             int sum = 0;
 
+            // Loop through each part
             foreach (string part in parts)
             {
-                if(int.TryParse(part, out int number))
+                // Try converting it to a number; ignore if it's not a valid number (like empty string)
+                if (int.TryParse(part, out int number))
                 {
                     sum += number;
                 }
             }
+
+            // Display the result at the end of the TextBox
             textBox1.Text += "= " + sum.ToString() + "+";
         }
 
+        /// <summary>
+        /// This method clears the TextBox when the "Vider" button is clicked.
+        /// </summary>
         private void btnVider_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            textBox1.Clear(); // Clear all text
         }
 
     }
