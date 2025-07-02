@@ -34,14 +34,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
-            this.txtCodePostal = new System.Windows.Forms.TextBox();
+            this.txtCP = new System.Windows.Forms.TextBox();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.btnEffacer = new System.Windows.Forms.Button();
             this.DateFormat = new System.Windows.Forms.Label();
-            this.errorProviderMontant = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtDate = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderMontant)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,14 +91,15 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(230, 22);
             this.txtNom.TabIndex = 4;
+          
             // 
-            // txtCodePostal
+            // txtCP
             // 
-            this.txtCodePostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodePostal.Location = new System.Drawing.Point(167, 163);
-            this.txtCodePostal.Name = "txtCodePostal";
-            this.txtCodePostal.Size = new System.Drawing.Size(114, 22);
-            this.txtCodePostal.TabIndex = 6;
+            this.txtCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCP.Location = new System.Drawing.Point(167, 163);
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(114, 22);
+            this.txtCP.TabIndex = 6;
             // 
             // txtMontant
             // 
@@ -107,7 +108,6 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(151, 22);
             this.txtMontant.TabIndex = 7;
-            this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged);
             // 
             // btnValider
             // 
@@ -141,16 +141,16 @@
             this.DateFormat.TabIndex = 10;
             this.DateFormat.Text = "(JJ/MM/AAAA)";
             // 
-            // errorProviderMontant
-            // 
-            this.errorProviderMontant.ContainerControl = this;
-            // 
             // txtDate
             // 
             this.txtDate.Location = new System.Drawing.Point(167, 83);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(151, 20);
             this.txtDate.TabIndex = 11;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FormValidation
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.btnEffacer);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtMontant);
-            this.Controls.Add(this.txtCodePostal);
+            this.Controls.Add(this.txtCP);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -172,8 +172,7 @@
             this.Name = "FormValidation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormValidation";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormValidation_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderMontant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,12 +185,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNom;
-        private System.Windows.Forms.TextBox txtCodePostal;
+        private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.Button btnEffacer;
         private System.Windows.Forms.Label DateFormat;
-        private System.Windows.Forms.ErrorProvider errorProviderMontant;
         private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

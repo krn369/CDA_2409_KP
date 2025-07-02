@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormClosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClosing.Designer.cs">
+      <DependentUpon>FormClosing.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormValidation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormClosing.resx">
+      <DependentUpon>FormClosing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormValidation.resx">
       <DependentUpon>FormValidation.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +89,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryPerson\ClassLibraryPerson.csproj">
+      <Project>{5ba06ce3-2e5b-4ce8-a044-24d194e07f6f}</Project>
+      <Name>ClassLibraryPerson</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibraryValidations\ClassLibraryValidations.csproj">
       <Project>{f1cc200c-973e-44c7-8f96-fa92bc8aed1b}</Project>
       <Name>ClassLibraryValidations</Name>

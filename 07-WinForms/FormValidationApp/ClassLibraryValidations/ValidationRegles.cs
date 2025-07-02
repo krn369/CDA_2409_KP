@@ -1,44 +1,73 @@
 ﻿using System;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace ClassLibraryValidations
 {
-
-        public static class ValidationRegles
+    public static class ValidationRegles
+    {
+        public static bool IsNomValid(string nom)
         {
+            if (string.IsNullOrWhiteSpace(nom))
+                return false;
 
-            public static bool IsNomCompletValid(string nomComplet)
-            {
-                // Supports Names with accents, apostrophes,space and hyphens
-                return Regex.IsMatch(nomComplet.Trim(), @"^[A-Za-zÀ-ÖØ-öø-ÿ'’-]+ [A-Za-zÀ-ÖØ-öø-ÿ'’-]+$");
-            }
+            nom = nom.Trim();
 
-            public static bool IsCodePostalValid(string code)
-            {
-            // // French-style 5-digit postal code
-            return Regex.IsMatch(code, @"^\d{5}$");
-            }
+            if (nom.Length > 30)
+                return false;
 
-            public static bool IsMontantValid(string montant)
-            {
-            // // Valid decimal number with optional commas or dots
-            return Regex.IsMatch(montant, @"^\d+([.,]\d{1,2})?$");
-            }
+            // Only letters (including accented) - no spaces or special chars
+            return Regex.IsMatch(nom, @"^[A-Za-zÀ-ÖØ-öø-ÿ'’\- ]+$");
+        }
 
         public static bool IsDateValid(string date)
         {
-            // 1. Regex to check format: two digits / two digits / four digits
+            if (string.IsNullOrWhiteSpace(date))
+                return false;
+
+            date = date.Trim();
+
+            // Enforce format dd/MM/yyyy
             if (!Regex.IsMatch(date, @"^\d{2}/\d{2}/\d{4}$"))
                 return false;
 
-            // 2. Check if it’s a valid calendar date using French format
-            return DateTime.TryParseExact(
-                date,
-                "dd/MM/yyyy",
-                System.Globalization.CultureInfo.InvariantCulture,
-                System.Globalization.DateTimeStyles.None,
-                out _);
+            // Parse with invariant culture (to match "dd/MM/yyyy" correctly)
+            if (!DateTime.TryParseExact(
+                    date,
+                    "dd/MM/yyyy",
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.None,
+                    out DateTime parsedDate))
+                return false;
+
+            // Check that date is in the future
+            return parsedDate > DateTime.Today;
         }
+
+
+        public static bool IsMontantValid(string montant)
+        {
+            if (string.IsNullOrWhiteSpace(montant))
+                return false;
+
+            montant = montant.Trim();
+
+            // Try to parse with NumberStyles.Number (allows decimal + thousands separators)
+            if (!decimal.TryParse(montant, NumberStyles.Number, CultureInfo.CurrentCulture, out decimal value))
+                return false;
+
+            return value >= 0;
+        }
+
+        public static bool IsCodePostalValid(string code)
+        {
+            code = code?.Trim();
+
+            // French-style 5-digit postal code
+            return Regex.IsMatch(code ?? "", @"^\d{5}$");
+        }
+
+
 
 
     }
