@@ -34,9 +34,6 @@ namespace WindowsFormsCheckBoxRadio
             groupBoxTC.Visible = false;
             groupBoxCase.Visible = false;
 
-            //Set default colors (system defaults)
-            labelResult.BackColor = SystemColors.Control;
-            labelResult.ForeColor = SystemColors.ControlText;
         }
 
 
@@ -58,7 +55,6 @@ namespace WindowsFormsCheckBoxRadio
                 ckBoxTC.Checked = false;
                 ckBoxCase.Checked = false;
 
-                labelResult.BackColor = SystemColors.Control;
                 labelResult.ForeColor = SystemColors.ControlText;
             }
 
@@ -81,7 +77,7 @@ namespace WindowsFormsCheckBoxRadio
             }
             else
             {
-                labelResult.BackColor = SystemColors.Control; // Reset to default
+                labelResult.BackColor = this.BackColor; // Reset to default
             }
 
             // Apply text color if enabled

@@ -244,13 +244,14 @@
             // radioLower
             // 
             this.radioLower.AutoSize = true;
+            this.radioLower.BackColor = System.Drawing.Color.Transparent;
             this.radioLower.Location = new System.Drawing.Point(6, 19);
             this.radioLower.Name = "radioLower";
             this.radioLower.Size = new System.Drawing.Size(78, 17);
             this.radioLower.TabIndex = 2;
             this.radioLower.TabStop = true;
             this.radioLower.Text = "Minuscules";
-            this.radioLower.UseVisualStyleBackColor = true;
+            this.radioLower.UseVisualStyleBackColor = false;
             this.radioLower.CheckedChanged += new System.EventHandler(this.radioLower_CheckedChanged);
             // 
             // labelResult
