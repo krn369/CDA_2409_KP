@@ -59,7 +59,6 @@
             // hsbRouge
             // 
             this.hsbRouge.Location = new System.Drawing.Point(73, 41);
-            this.hsbRouge.LargeChange = 10;
             this.hsbRouge.Maximum = 264;
             this.hsbRouge.Name = "hsbRouge";
             this.hsbRouge.Size = new System.Drawing.Size(205, 20);
@@ -114,7 +113,6 @@
             // hsbBleu
             // 
             this.hsbBleu.Location = new System.Drawing.Point(73, 74);
-            this.hsbBleu.LargeChange = 10;
             this.hsbBleu.Maximum = 264;
             this.hsbBleu.Name = "hsbBleu";
             this.hsbBleu.Size = new System.Drawing.Size(205, 20);
@@ -157,7 +155,6 @@
             // hsbVert
             // 
             this.hsbVert.Location = new System.Drawing.Point(73, 105);
-            this.hsbVert.LargeChange = 10;
             this.hsbVert.Maximum = 264;
             this.hsbVert.Name = "hsbVert";
             this.hsbVert.Size = new System.Drawing.Size(205, 20);
