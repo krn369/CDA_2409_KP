@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40355E12-E62B-44F2-AABB-B9C489C34D63}</ProjectGuid>
+    <ProjectGuid>{4265410B-7ADC-4B2D-A3A3-CA7CCE4CDBE0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ColorMixer</RootNamespace>
-    <AssemblyName>ColorMixer</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>StagairesAuCRM</RootNamespace>
+    <AssemblyName>StagairesAuCRM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -46,17 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorMixerCM.cs" />
-    <Compile Include="FormColorMixer.cs">
+    <Compile Include="InscriptionStagiaireForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormColorMixer.Designer.cs">
-      <DependentUpon>FormColorMixer.cs</DependentUpon>
+    <Compile Include="InscriptionStagiaireForm.Designer.cs">
+      <DependentUpon>InscriptionStagiaireForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormColorMixer.resx">
-      <DependentUpon>FormColorMixer.cs</DependentUpon>
+    <Compile Include="SuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessForm.Designer.cs">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InscriptionStagiaireForm.resx">
+      <DependentUpon>InscriptionStagiaireForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SuccessForm.resx">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
